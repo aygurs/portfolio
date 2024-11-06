@@ -1,0 +1,391 @@
+/*-----------------GENERAL CSS SETTINGS-----------------*/
+
+/*Font Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap');
+
+/*Font Classes*/
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/*Variables*/
+:root {
+    /*Website Colour Scheme*/
+    --primary: rgb(250, 249, 246);
+    --secondary: rgb(3, 169, 244);
+    --tertiary: rgb(15, 29, 43);
+}
+
+/*Global Variables*/
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Reset HTML and Body Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+figure{
+  border: 0;
+  margin: 0;
+}
+main{
+  margin-top: 103px;
+}
+/* Reset List Styles */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset Text */
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: var(--tertiary);
+  color: var(--primary);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*-----------------HOME PAGE-----------------*/
+/*Hides languages until they're shown*/
+.hidden{
+  display: none;
+}
+/*Fade in animation*/
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/*Global classes*/
+.section-title{
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    font-size: 2em;
+    font-weight: 400;
+    border-bottom: 2px solid var(--secondary);
+  }
+
+/*Main container holding text, portrait and logos*/
+#hero-main-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10em 15vw 7em 15vw;
+    animation: 1.5s fadeInUp;
+}
+/*Container for portrait and logos*/
+#hero-img-container{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+/*Image figure*/
+#hero-img-figure{
+  position: relative;
+  right: 3em;
+  z-index: 1;
+}
+/*Main image*/
+#hero-img{
+  width: 350px;
+}
+/*Container for logos*/
+#hero-img-logos{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: transparent;
+    z-index: 1;
+}
+/*Logo backgrounds*/
+#html-img, #css-img, #js-img{
+  background-color: transparent;
+  padding: 0.5em;
+  width: 90px;
+}
+/*Light blue square around portrait img*/
+#hero-img-decoration{
+  border: 4px solid var(--secondary);
+  position: absolute;
+  left: -1.5em;
+  top: -1.5em;
+  width: 350px;
+  height: 466.66px;
+  background-color: transparent;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+/*Holds text and buttons*/
+#hero-text-buttons-section{
+  margin-right: 5em;
+}
+/*Container for the main hero text (no buttons)*/
+#hero-text-container{
+  font-size: 1.3em;
+}
+/*Text for only the name*/
+#hero-text-container h1{
+  font-size: 3em
+}
+/*Container for hero buttons (portfolio & contact me)*/
+#hero-buttons-container{
+  display: flex;
+  align-items: center;
+  max-width: 15em;
+  padding-top: 1em;
+  padding-right: 10em;
+}
+/*Each button*/
+#hero-button-portfolio{
+  margin-right: 2em;
+  padding: 0.5em 1.5em;
+  background-color: var(--secondary);
+  border-radius: 5px;
+  color: var(--primary);
+  border: none;
+  cursor: pointer;
+}
+/*Contact button only*/
+#hero-button-contact{
+  color: var(--primary)
+}
+/*Button on hover*/
+#hero-button-portfolio:hover {
+  background-color: rgb(4, 128, 184);
+  color: var(--primary);
+}
+
+/*Tablet screen*/
+@media only screen and (max-width: 992px){
+  /*Column layout*/
+  #hero-main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  /*Adjusts positioning from text*/
+  #hero-text-buttons-section{
+    margin-right: 0em;
+    margin-bottom: 5em;
+  }
+  /*Aligns Logos*/
+  #hero-img-figure{
+    right: 3em;
+  }
+  /*Adjusts positioning of image container*/
+  #hero-img-container{
+    padding-left: 3em;
+  }
+}
+
+/*Phone screen*/
+@media only screen and (max-width: 600px){
+  /*Font size change*/
+  #hero-text-container{
+    font-size: 0.7em;
+  }
+  /*Image size change*/
+  #hero-img{
+    width: 230px;
+  }
+  /*Image decoration size change*/
+  #hero-img-decoration{
+    width: 230px;
+    height: 306.66px;
+  }
+  /*Sub container text size change*/
+  #hero-sub-container p{
+    font-size: 0.9em;
+    text-align: center;
+  }
+  /*Makes items in this container central*/
+  #hero-text-buttons-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /*Buttons container padding*/
+  #hero-buttons-container{
+    padding-right: 3.5em;
+  }
+  /*Change size of buttons on hero page*/
+  #hero-button-portfolio{
+    padding: 0.2em 1em;
+    font-size: 0.8em;
+  }
+  /*Contact button font size*/
+  #hero-button-contact{
+    font-size: 0.8em;
+  }
+  /*Logo backgrounds and size*/
+  #html-img, #css-img, #js-img{
+    background-color: transparent;
+    padding: 0.5em;
+    width: 60px;
+  }
+  /*Adjusts offset of portrait image*/
+  #hero-img-figure{
+    right: 1em;
+  }
+}
+
+/*ABOUT SECTION*/
+
+/*Container for about section*/
+#about-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    padding: 4em 7em
+  }
+  /*Container for the text of about section*/
+  #about-text-container{
+    max-width: 50em;
+    margin-right: 2em;
+  }
+  /*Text in about container*/
+  #about-container p{
+    background-color: var(--primary);
+    color: var(--tertiary);
+    font-size: 1.2em;
+  }
+  #about-container h2{
+    color: var(--tertiary);
+  }
+  /*UOL Logo*/
+  #education-img{
+    width: 300px;
+    padding-top: 2em;
+  }

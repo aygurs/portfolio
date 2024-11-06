@@ -1,0 +1,262 @@
+<!--Figure out why about me title isnt changing colour-->
+<!--My languages section with scrolling logos-->
+<!--Portfolio and contact section-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Metadata-->
+        <title>AyDev | Home</title>
+        <meta charset='UTF-8'>
+        <meta name='description' content='Professional portfolio for Aydin Gursoy in 10 years time.'>
+        <meta name='keywords' content='Portfolio, Web Dev portfolio, Professional Portfolio, Web Dev Experience'>
+        <meta name='author' content='Aydin Gursoy'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta name='robots' content='noindex, nofollow'>
+        <link rel="stylesheet" href="stylesheets/main.css">
+        <link rel="stylesheet" href="stylesheets/nav-footer.css">
+        <!--Swiper.js-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="stylesheet" href="stylesheets/swiper-about-section.css">
+        <!--[1] Copied from source-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+    <body>
+        <!--Navigation Bar-->
+        <header>
+            <nav id="nav">
+                <!--Logo-->
+                <a href="index.html"><img src="media/images/logo-white.png" id="logo" alt="AyDev Logo" width="120"></a>
+                <!--Whole Nav Button container-->
+                <div id="nav-button-main-container">
+                    <!--Main Navigation Buttons-->
+                    <div id="nav-buttons-container">
+                        <ul>
+                            <li><a href="index.html">
+                                <span class="lang en">Home</span>
+                                <span class="lang fr hidden">Accueil</span>
+                                <span class="lang es hidden">Inicio</span>
+                            </a></li>
+                            <li><a href="about.html">
+                                <span class="lang en">About</span>
+                                <span class="lang fr hidden">À propos</span>
+                                <span class="lang es hidden">Acerca de</span>
+                            </a></li>
+                            <li><a href="portfolio.html">
+                                <span class="lang en">Portfolio</span>
+                                <span class="lang fr hidden">Portefeuille</span>
+                                <span class="lang es hidden">Portafolios</span>
+                            </a></li>
+                            <li><a href="contact.html">
+                                <span class="lang en">Contact</span>
+                                <span class="lang fr hidden">Contact</span>
+                                <span class="lang es hidden">Contacto</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <!--Hamburger menu on smaller devices-->
+                    <div id="hamburger-buttons-container">
+                        <button onclick="openHamburgerMenu()" id="nav-hamburger-menu">☰</button>
+                        <ul id="hamburger-list">
+                            <li><a href="index.html">
+                                <span class="lang en">Home</span>
+                                <span class="lang fr hidden">Accueil</span>
+                                <span class="lang es hidden">Inicio</span>
+                            </a></li>
+                            <li><a href="about.html">
+                                <span class="lang en">About</span>
+                                <span class="lang fr hidden">À propos</span>
+                                <span class="lang es hidden">Acerca de</span>
+                            </a></li>
+                            <li><a href="portfolio.html">
+                                <span class="lang en">Portfolio</span>
+                                <span class="lang fr hidden">Portefeuille</span>
+                                <span class="lang es hidden">Portafolios</span>
+                            </a></li>
+                            <li><a href="contact.html">
+                                <span class="lang en">Contact</span>
+                                <span class="lang fr hidden">Contact</span>
+                                <span class="lang es hidden">Contacto</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <!--Accessibility Nav menu-->
+                    <div id="nav-access-button-container">
+                        <button onclick="openAccessMenu()" id="access-button"><img src="media/images/accessibility-logo.png" id="nav-access-img" alt="Accessibility Button" width="30"></button>
+                        <div id="nav-access-menu">
+                            <button class="access-button"><img src="media/images/text-increase-icon-white.png" id="font-increase-button" class="nav-access-menu-img" alt="Increase Text Size" width="30"></button>
+                            <button class="access-button"><img src="media/images/sun-icon-white.png" id="mode-button" class="nav-access-menu-img" alt="Light Mode" width="30"></button>
+                            <button class="access-button" onclick="switchLanguage('en')"><img src="media/images/en-icon-white.png" id="english-lang-button" class="nav-access-menu-img" alt="English Language" width="30"></button>
+                            <button class="access-button" onclick="switchLanguage('fr')"><img src="media/images/fr-icon-white.png" id="french-lang-button" class="nav-access-menu-img" alt="French Language" width="30"></button>
+                            <button class="access-button" onclick="switchLanguage('es')"><img src="media/images/es-icon-white.png" id="spanish-lang-button" class="nav-access-menu-img" alt="Spanish Language" width="30"></button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--Home Page Start-->
+        <!--All text items will contain 3 languages: English, French and Spanish-->
+        <!--English will be default, French and Spanish will be hidden until chosen otherwise-->
+        <main>
+            <div id="hero-main-container">
+                <!--Hero Text Section-->
+                <section id="hero-text-buttons-section">
+                    <!--Welcome text-->
+                    <div id="hero-text-container">
+                        <h2 class="lang en">Hello, my name is</h2>
+                        <h2 class="lang fr hidden">Bonjour, je m'appelle</h2>
+                        <h2 class="lang es hidden">Hola, mi nombre es</h2>
+                        <h1>Aydin Gursoy</h1>
+                        <!--[2] type.js span, used class from source-->
+                        <h2 class="lang en">I'm a <span class="auto-type-en"></span></h2>
+                        <h2 class="lang fr hidden">Je suis un <span class="auto-type-fr"></span></h2>
+                        <h2 class="lang es hidden">Soy un <span class="auto-type-es"></span></h2>
+                    </div>
+                    <!--Portfolio and contact buttons-->
+                    <div id="hero-buttons-container">
+                        <button id="hero-button-portfolio" onclick="location.href = 'portfolio.html'">
+                            <span class="lang en">Portfolio</span>
+                            <span class="lang fr hidden">Portefeuille</span>
+                            <span class="lang es hidden">Portafolio</span>
+                        </button>
+                        <a href="contact.html" id="hero-button-contact">
+                            <span class="lang en">Contact Me</span>
+                            <span class="lang fr hidden">Contactez-moi</span>
+                            <span class="lang es hidden">Contactame</span>
+                        </a>
+                    </div>
+                </section>
+                <!--Hero Image Section-->
+                <div id="hero-img-container">
+                    <figure id="hero-img-figure">
+                        <div id="hero-img-decoration"></div>
+                        <img src="media/images/portrait.png" id="hero-img" alt="Aydin Gursoy">
+                    </figure>
+                    <!--Language logos on portrait-->
+                    <div id="hero-img-logos">
+                        <img src="media/images/html-logo.png" alt="HTML Logo" id="html-img" width="90">
+                        <img src="media/images/css-logo.png" alt="CSS Logo" id="css-img" width="90">
+                        <img src="media/images/js-logo.png" alt="Javascript Logo" id="js-img" width="90">
+                    </div>
+                </div>
+            </div>
+            <!--About Section-->
+            <div id="about-container" data-aos="fade-up" data-aos-duration="800">
+                <section id="about-text-container">
+                    <h2 class="section-title lang en">About me</h2>
+                    <h2 class="section-title lang fr">À propos de moi</h2>
+                    <h2 class="section-title lang es">Acerca de mí</h2>
+                    <p class="lang en">
+                        Hello, and welcome to my portfolio! My name is Aydin Gursoy, and I'm a 27-year-old junior front-end web developer with a strong interest in web and mobile development. 
+                        Combining a solid educational foundation with a passion for self-learning, I strive to create high-quality projects with accessible, sleek designs.
+                        <br><br>
+                        Currently, I'm pursuing a Bachelor's degree in Computer Science at the University of London. I'm eager to join a development team and gain hands-on industry experience in software development.
+                    </p>
+                    <p class="lang fr hidden">
+                        Bonjour et bienvenue sur mon portfolio ! Je m'appelle Aydin Gursoy et je suis un développeur Web front-end junior de 27 ans avec un fort intérêt pour le développement Web et mobile. 
+                        Combinant une base pédagogique solide avec une passion pour l'auto-apprentissage, je m'efforce de créer des projets de haute qualité avec des designs accessibles et élégants.
+                        <br><br>
+                        Actuellement, je poursuis un baccalauréat en informatique à l'Université de Londres. J'ai hâte de rejoindre une équipe de développement et d'acquérir une expérience pratique du secteur du développement de logiciels.
+                    </p>
+                    <p class="lang es hidden">
+                        ¡Hola y bienvenido a mi portafolio! Mi nombre es Aydin Gursoy y soy un desarrollador web front-end junior de 27 años con un gran interés en el desarrollo web y móvil. 
+                        Combinando una sólida base educativa con una pasión por el autoaprendizaje, me esfuerzo por crear proyectos de alta calidad con diseños elegantes y accesibles.
+                        <br><br>
+                        Actualmente, estoy cursando una Licenciatura en Ciencias de la Computación en la Universidad de Londres. Estoy ansioso por unirme a un equipo de desarrollo y adquirir experiencia práctica en la industria del desarrollo de software.
+                    </p>
+                    <img id="education-img" src="media/images/education-img2.png">
+                </section>
+                <!--Swiper.js images-->
+                <!--[3] Copied divs from source demo and altered to how many I want-->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--Footer-->
+        <footer>
+            <div id="footer-main-container" data-aos="fade-up" data-aos-duration="800">
+                <!--To Top Button-->
+                <div id="footer-totop-button-container">
+                    <a href="#"><img src="media/images/to-top.png" id="to-top-img" alt="To top" width="50"></a>
+                </div>
+                <!--Social Links-->
+                <div id="footer-socials-container">
+                    <a href="https://www.facebook.com/aydingurs/"><img src="media/images/fb-logo-white.png" id="footer-fb-logo" class="footer-social-logo" alt="Facebook Logo" width="30"></a>
+                    <a href="https://www.linkedin.com/in/aydin-gursoy/"><img src="media/images/linkedin-logo-white.png" id="footer-linkedin-logo" class="footer-social-logo" alt="LinkedIn Logo" width="30"></a>
+                    <a href="https://github.com/aygurs"><img src="media/images/github-logo-white.png" id="footer-github-logo" class="footer-social-logo" alt="GitHub Logo" width="30"></a>
+                </div>
+                <!--Copyright Text-->
+                <div id="footer-copyright-container">
+                    <p class="lang en">All Rights Reserved © 2024 Aydin Gursoy</p>
+                    <p class="lang fr hidden">Tous droits réservés © 2024 Aydin Gursoy</p>
+                    <p class="lang es hidden">Reservados todos los derechos © 2024 Aydin Gursoy</p>
+                    <p>
+                        <span class="lang en">Designed by me and coded within</span>
+                        <span class="lang fr hidden">Conçu par moi et codé à l'intérieur</span>
+                        <span class="lang es hidden">Diseñado por mí y codificado dentro</span>
+                        <a id="footer-vcs-link" href="https://code.visualstudio.com/">Visual Studio Code</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!--Scripts-->
+        <script src="scripts/main.js"></script>
+        <!--[1] Copied from source-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <!--[2] Copied from source, altered each typed object as needed-->
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            let typedEn = new Typed(".auto-type-en", {
+                strings: ["Web Developer", "Front-End Developer", "IOS Developer", "Android Developer"],
+                typeSpeed: 150,
+                backSpeed: 150,
+                loop:true
+            });
+            let typedFr = new Typed(".auto-type-fr", {
+                strings: ["Développeur Web", "Développeur Front-End", "Développeur IOS", "Développeur Android"],
+                typeSpeed: 150,
+                backSpeed: 150,
+                loop:true
+            });
+            let typedEs = new Typed(".auto-type-es", {
+                strings: ["Desarrollador web", "Desarrollador front-end", "Desarrollador IOS", "Desarrollador Android"],
+                typeSpeed: 150,
+                backSpeed: 150,
+                loop:true
+            });
+        </script>
+        <!--[3] Copied from source-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+            effect: "cards",
+            grabCursor: true,
+            });
+        </script>
+    </body>
+</html>
+<!--CITATIONS-->
+    <!--[1]-->
+    <!--M Sajnóg 'AOS', 2015 [Source code]. 
+    https://github.com/michalsnik/aos?tab=readme-ov-file -->
+
+    <!--[2]-->
+    <!--M Boldt 'typed.js', 2023 [Source code]. 
+    https://github.com/mattboldt/typed.js/?tab=readme-ov-file -->
+
+    <!--[3]-->
+    <!--V Kharlampidi 'Swiper JS', 2019 [Source code]. 
+    https://github.com/nolimits4web/swiper?tab=readme-ov-file -->

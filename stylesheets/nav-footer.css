@@ -1,0 +1,197 @@
+/*-------------Nav Bar-----------*/
+
+/*Whole nav element - holds logo, and main button container*/
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em 6em;
+    font-weight: 400;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 2;
+    background-color: var(--tertiary);
+    color: var(--primary);
+}
+/*Holds all buttons in nav bar (Home-Access Button)*/
+#nav-button-main-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    position: relative;
+}
+/*Whole List element in nav bar (Home-Contact)*/
+#nav-buttons-container ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-right: 1em;
+}
+/*Individual link element in list*/
+#nav-button-main-container li{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+/*Link element in list*/
+#nav-buttons-container a{
+    text-decoration: none;
+    color: var(--primary);
+    border-bottom: 1px solid transparent;
+}
+#nav-buttons-container a:hover{
+    border-bottom: 1px solid var(--secondary);
+}
+
+/* Access Button Container*/
+#nav-access-button-container button{
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+    border-left: 1px solid transparent;
+    background-color: var(--tertiary);
+}
+#nav-access-button-container button:hover {
+    border-left: 1px solid var(--secondary);
+}
+#nav-access-button-container button:active {
+    border-left: 1px solid var(--primary);
+}
+/*Image of access button*/
+#nav-access-img{
+    position: relative;
+}
+/*Menu of access button*/
+#nav-access-menu{
+    display: none;
+}
+#nav-access-menu.active{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transition: all 0.3s ease;
+    animation: 0.3s ease-in;
+    z-index: 1;
+}
+
+/*-------------Footer-----------*/
+/*Holds everything but to top button*/
+#footer-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin: 5em;
+    text-align: center;
+}
+/*Container for to top button*/
+#footer-totop-button-container{
+    position: relative;
+    bottom: 7.5em;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+/*Image for to top button*/
+#footer-totop-button-container *{
+    background-color: transparent;
+}
+/*Container for social media logos*/
+#footer-socials-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 20em;
+    margin-bottom: 3em;
+}
+/*Links footer text*/
+#footer-copyright-container a{
+    color: var(--secondary)
+}
+#footer-copyright-container p{
+    padding: 0.5em;
+}
+
+/*-------------Hamburger Menu-----------*/
+/*Holds all hamburger menu items*/
+#hamburger-buttons-container{
+    position: relative;
+    display: none;
+}
+#hamburger-buttons-container *{
+    background-color: var(--secondary);
+}
+/*Hamburger menu button only*/
+#nav-hamburger-menu{
+    padding: 0.2em 0.7em;
+    font-size: large;
+    margin-right: 15px;
+    border: none;
+    border-radius: 5px;
+    color: var(--primary);
+}
+/*List of hamburger menu*/
+#hamburger-list{
+    display: none;
+}
+#hamburger-list.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 14px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+/*All list items in hamburger menu*/
+#hamburger-list li{
+    padding: 0.5em 1.5em;
+    border-left: 3px solid transparent;
+}
+#hamburger-list a:hover{
+    color: var(--tertiary);
+}
+/*Tablet screen*/
+@media only screen and (max-width: 992px){
+    /*turns nav bar into hamburger menu*/
+    #nav-buttons-container{
+        display: none;
+    }
+    #hamburger-buttons-container{
+        display: block;
+    }
+}
+/*Phone screen*/
+@media only screen and (max-width: 600px){
+    /*Decreases padding on mobile version*/
+    nav{
+        padding: 2em;
+    }
+    #footer-totop-button-container{
+        bottom: 5em;
+    }
+    #to-top-img{
+        width: 40px;
+    }
+    #footer-main-container{
+        margin: 3em;
+        margin-bottom: 2em;
+    }
+    #footer-copyright-container p{
+        font-size: 0.8em;
+    }
+    #logo{
+        width: 80px;
+    }
+}

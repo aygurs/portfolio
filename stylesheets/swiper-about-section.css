@@ -1,0 +1,81 @@
+/*Swiper CSS demo used as a base template
+and then altered by me to fit website needs*/
+.swiper {
+    width: 20em;
+    max-width: 17em;
+    height: 350px;
+    }
+    .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    }
+    .swiper-slide:nth-child(1n) {
+    background-image: url('../media/images/slider1.jpg');
+    background-size: cover;
+    background-position: center;
+    }
+    
+    .swiper-slide:nth-child(2n) {
+    background-image: url('../media/images/slider2.jpg');
+    background-size: cover;
+    background-position: center;
+    }
+    
+    .swiper-slide:nth-child(3n) {
+    background-image: url('../media/images/slider3.jpg');
+    background-size: cover;
+    background-position: center;
+    }
+    
+    .swiper-slide:nth-child(4n) {
+    background-image: url('../media/images/slider4.jpg');
+    background-size: cover;
+    background-position: center;
+    }
+    
+    .swiper-slide:nth-child(5n) {
+    background-image: url('../media/images/slider5.jpg');
+    background-size: cover;
+    background-position: center;
+    }
+    
+    .swiper-slide:nth-child(6n) {
+    background-image: url('../media/images/slider6.jpg');
+    background-size: cover;
+    background-position: center;
+    }
+    
+    .swiper-slide:nth-child(7n) {
+    background-image: url('../media/images/slider7.jpg');
+    background-size: cover;
+    background-position: center;
+    }
+    
+    .swiper-slide:nth-child(8n) {
+    background-image: url('../media/images/slider8.jpg');
+    background-size: cover;
+    background-position: center;
+    }
+    /*Tablet Screen*/
+    @media only screen and (max-width: 992px){
+    .swiper{
+        margin-top: 3em;
+        width: 15em;
+        height: 250px;
+    }
+    }
+    /*Phone screen*/
+    @media only screen and (max-width: 600px){
+    .swiper{
+        width: 12em;
+        height: 250px;
+    }
+    }
+    /*CITATIONS*/
+        /*V Kharlampidi 'Swiper JS', 2019 [Source code]. 
+        https://github.com/nolimits4web/swiper?tab=readme-ov-file*/
