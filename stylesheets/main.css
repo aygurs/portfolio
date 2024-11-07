@@ -197,7 +197,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10em 15vw 7em 15vw;
+    margin: 11em 15vw 7em 15vw;
     animation: 1.5s fadeInUp;
 }
 /*Container for portrait and logos*/
@@ -368,7 +368,7 @@ a {
     align-items: center;
     justify-content: center;
     background-color: var(--primary);
-    padding: 4em 7em
+    padding: 10em 7em 8em 7em
   }
   /*Container for the text of about section*/
   #about-text-container{
@@ -389,3 +389,141 @@ a {
     width: 300px;
     padding-top: 2em;
   }
+
+/*PORTFOLIO SECTION*/
+
+/*Logo images*/
+.languages-img{
+  padding-right: 11em;
+  background-color: var(--tertiary);
+}
+/*Container for logos only*/
+#languages-logo-container{
+  overflow: hidden;
+  width: 100%;
+  padding-top: 2em;
+}
+/*Animation on card hover*/
+@keyframes cycle {
+  0% {border: 2px solid var(--secondary);}
+  50% {border: 2px solid var(--primary);}
+  100% {border: 2px solid var(--secondary);}
+}
+/*Rotates background image for card border*/
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*Curve all image borders*/
+.project-img{
+  border-radius: 10px;
+}
+/*Outer div for feature card*/
+#feature-project-card-outer{
+  width: 85%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 2em;
+}
+/*Pseudo element for outer div of card*/
+#feature-project-card-outer::before{
+  content: "";
+  display: block;
+  height: 1500px;
+  width: 1500px;
+  background: conic-gradient(
+    transparent 0deg 90deg,
+    var(--secondary) 90deg 180deg,
+    transparent 180deg 270deg,
+    var(--secondary) 270deg 360deg
+  );
+  position: absolute;
+  animation: rotate 8s linear infinite;
+  z-index: 0;
+}
+/*Feature project card inner div*/
+#feature-project-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border-radius: 10px;
+  margin: 0.1em;
+  overflow: hidden;
+  background-color: var(--tertiary);
+}
+/*Container for feature project text*/
+#feature-project-description{
+  max-width: 30em;
+  border-left: 2px solid var(--secondary);
+  padding: 1em;
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+/*Title link for feature project*/
+#feature-project-description a{
+  color: var(--primary);
+}
+
+/*Container for all other projects*/
+#projects-section{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2em;
+  justify-content: center;
+}
+/*Outer container for all project cards*/
+.project-outer-card{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 3em;
+}
+/*Pseudo element for all project cards*/
+.project-outer-card::before{
+  content: "";
+  display: block;
+  height: 900px;
+  width: 900px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--secondary) 100%
+  );
+  position: absolute;
+  animation: rotate 8s linear infinite;
+  z-index: 0;
+}
+/*Each project card (not featured)*/
+.project-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.1em;
+  padding: 1em;
+  z-index: 1;
+  background-color: var(--tertiary);
+}
+
+/*CONTACT SECTION*/
+#contact-container{
+  background-color: var(--primary);
+  color: var(--tertiary);
+}

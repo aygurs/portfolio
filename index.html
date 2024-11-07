@@ -1,4 +1,5 @@
 <!--Figure out why about me title isnt changing colour-->
+<!--Mobile versions of sections-->
 <!--My languages section with scrolling logos-->
 <!--Portfolio and contact section-->
 
@@ -37,17 +38,17 @@
                                 <span class="lang fr hidden">Accueil</span>
                                 <span class="lang es hidden">Inicio</span>
                             </a></li>
-                            <li><a href="about.html">
+                            <li><a href="#about-container">
                                 <span class="lang en">About</span>
                                 <span class="lang fr hidden">À propos</span>
                                 <span class="lang es hidden">Acerca de</span>
                             </a></li>
-                            <li><a href="portfolio.html">
+                            <li><a href="#portfolio-container">
                                 <span class="lang en">Portfolio</span>
                                 <span class="lang fr hidden">Portefeuille</span>
                                 <span class="lang es hidden">Portafolios</span>
                             </a></li>
-                            <li><a href="contact.html">
+                            <li><a href="#contact-container">
                                 <span class="lang en">Contact</span>
                                 <span class="lang fr hidden">Contact</span>
                                 <span class="lang es hidden">Contacto</span>
@@ -63,17 +64,17 @@
                                 <span class="lang fr hidden">Accueil</span>
                                 <span class="lang es hidden">Inicio</span>
                             </a></li>
-                            <li><a href="about.html">
+                            <li><a href="#about-container">
                                 <span class="lang en">About</span>
                                 <span class="lang fr hidden">À propos</span>
                                 <span class="lang es hidden">Acerca de</span>
                             </a></li>
-                            <li><a href="portfolio.html">
+                            <li><a href="#portfolio-container">
                                 <span class="lang en">Portfolio</span>
                                 <span class="lang fr hidden">Portefeuille</span>
                                 <span class="lang es hidden">Portafolios</span>
                             </a></li>
-                            <li><a href="contact.html">
+                            <li><a href="#contact-container">
                                 <span class="lang en">Contact</span>
                                 <span class="lang fr hidden">Contact</span>
                                 <span class="lang es hidden">Contacto</span>
@@ -114,12 +115,12 @@
                     </div>
                     <!--Portfolio and contact buttons-->
                     <div id="hero-buttons-container">
-                        <button id="hero-button-portfolio" onclick="location.href = 'portfolio.html'">
+                        <button id="hero-button-portfolio" onclick="location.href = '#portfolio-container'">
                             <span class="lang en">Portfolio</span>
                             <span class="lang fr hidden">Portefeuille</span>
                             <span class="lang es hidden">Portafolio</span>
                         </button>
-                        <a href="contact.html" id="hero-button-contact">
+                        <a href="#contact-container" id="hero-button-contact">
                             <span class="lang en">Contact Me</span>
                             <span class="lang fr hidden">Contactez-moi</span>
                             <span class="lang es hidden">Contactame</span>
@@ -141,8 +142,8 @@
                 </div>
             </div>
             <!--About Section-->
-            <div id="about-container" data-aos="fade-up" data-aos-duration="800">
-                <section id="about-text-container">
+            <div id="about-container" >
+                <section id="about-text-container" data-aos="fade-right" data-aos-duration="800" data-aos-offset="100">
                     <h2 class="section-title lang en">About me</h2>
                     <h2 class="section-title lang fr">À propos de moi</h2>
                     <h2 class="section-title lang es">Acerca de mí</h2>
@@ -168,19 +169,178 @@
                 </section>
                 <!--Swiper.js images-->
                 <!--[3] Copied divs from source demo and altered to how many I want-->
-                <div class="swiper mySwiper">
+                <div class="swiper1 mySwiper1" data-aos="fade-right" data-aos-duration="800" data-aos-offset="100">
                     <div class="swiper-wrapper">
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
                     </div>
                 </div>
             </div>
+            <!--Portfolio Section-->
+            <section id="portfolio-container">
+                <!--Scrolling marquee [4]-->
+                <div id="languages-logo-container" class='marquee'>
+                    <img src="media/images/html-logo.png" class="languages-img" alt="HTML Logo" width="70">
+                    <img src="media/images/css-logo.png" class="languages-img" alt="CSS Logo" width="70">
+                    <img src="media/images/js-logo.png" class="languages-img" alt="Javascript Logo" width="70">
+                    <img src="media/images/python-logo.png" class="languages-img" alt="Python Logo" width="80">
+                    <!--Duplicated images to loop-->
+                    <img src="media/images/html-logo.png" class="languages-img" alt="HTML Logo" width="70">
+                    <img src="media/images/css-logo.png" class="languages-img" alt="CSS Logo" width="70">
+                    <img src="media/images/js-logo.png" class="languages-img" alt="Javascript Logo" width="70">
+                    <img src="media/images/python-logo.png" class="languages-img" alt="Python Logo" width="80">
+                    <!--Duplicated images to loop-->
+                    <img src="media/images/html-logo.png" class="languages-img" alt="HTML Logo" width="70">
+                    <img src="media/images/css-logo.png" class="languages-img" alt="CSS Logo" width="70">
+                    <img src="media/images/js-logo.png" class="languages-img" alt="Javascript Logo" width="70">
+                    <img src="media/images/python-logo.png" class="languages-img" alt="Python Logo" width="80">
+                </div>
+                <div>
+                    <h2>Portfolio</h2>
+                    <div id="feature-project-card-outer">
+                        <div id="feature-project-card">
+                            <!--Feature project images-->
+                            <!--[2] Copied div layout from source demo-->
+                            <div class="swiper2 mySwiper2">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide two"></div>
+                                  <div class="swiper-slide two"></div>
+                                  <div class="swiper-slide two"></div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination2"></div>
+                            </div>
+                            <!--Feature project title and description-->
+                            <div id="feature-project-description">
+                                <!--Title-->
+                                <a href="https://aygurs.github.io/js-string-methods/">
+                                    <h2 class="project-title lang en">JS Nuggets</h2>
+                                    <h2 class="project-title lang fr hidden">JS Nuggets</h2>
+                                    <h2 class="project-title lang es hidden">JS Nuggets</h2>
+                                </a>
+                                <!--Description-->
+                                <p class="project-description lang en">This project aims to teach junior developers about array and string methods you can use in JavaScript.</p>
+                                <p class="project-description lang en">Users aim is to find errors in the methods with the arguments they use for each method.</p>
+                                <p class="project-description lang fr hidden">Ce projet vise à enseigner aux développeurs juniors les méthodes de tableaux et de chaînes que vous pouvez utiliser en JavaScript.</p>
+                                <p class="project-description lang fr hidden">Le but des utilisateurs est de trouver les erreurs dans les méthodes avec les arguments qu'ils utilisent pour chaque méthode.</p>
+                                <p class="project-description lang es hidden">Este proyecto tiene como objetivo enseñar a los desarrolladores junior sobre los métodos de matrices y cadenas que pueden utilizar en JavaScript.</p>
+                                <p class="project-description lang es hidden">El objetivo de los usuarios es encontrar errores en los métodos con los argumentos que utilizan para cada método.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--Other Projects Section-->
+                <section id="projects-section" data-aos="fade-up" data-aos-duration="800">
+                    <!--Other Project Cards-->
+                    <!--Calculator project card-->
+                    <div class="project-outer-card">
+                        <div class="project-card">
+                            <!--Project image-->
+                            <img src="media/images/project2.png" class="project-img" alt="Calculator Project" width="500">
+                            <!--Project title-->
+                            <a href="https://aygurs.github.io/calculator/">
+                                <h3 class="project-title lang en">Calculator</h3>
+                                <h3 class="project-title lang fr hidden">Calculatrice</h3>
+                                <h3 class="project-title lang es hidden">Calculadora</h3>
+                            </a>
+                            <!--Project description-->
+                            <p class="project-description lang en">A working calculator made using JavaScript</p>
+                            <p class="project-description lang fr hidden">Une calculatrice fonctionnelle réalisée en JavaScript</p>
+                            <p class="project-description lang es hidden">Una calculadora funcional hecha con JavaScript</p>
+                        </div>
+                    </div>
+                    <!--Etch-a-sketch project card-->
+                    <div class="project-outer-card">
+                        <div class="project-card">
+                            <!--Project image-->
+                            <img src="media/images/project3.png" class="project-img" alt="Etch-a-sketch Project" width="500">
+                            <!--Project title-->
+                            <a href="https://aygurs.github.io/etch-a-sketch/">
+                                <h3 class="project-title lang en">Etch-A-Sketch</h3>
+                                <h3 class="project-title lang fr hidden">Etch-A-Sketch</h3>
+                                <h3 class="project-title lang es hidden">Etch-A-Sketch</h3>
+                            </a>
+                            <!--Project description-->
+                            <p class="project-description lang en">Web Application allowing users to draw on a canvas</p>
+                            <p class="project-description lang fr hidden">Application Web permettant aux utilisateurs de dessiner sur une toile</p>
+                            <p class="project-description lang es hidden">Aplicación web que permite a los usuarios dibujar sobre un lienzo</p>
+                        </div>
+                    </div>
+                    <!--Rock, paper, scissors project card-->
+                    <div class="project-outer-card">
+                        <div class="project-card">
+                            <!--Project image-->
+                            <img src="media/images/project4.png" class="project-img" alt="Rock, paper, scissors Project" width="500">
+                            <!--Project title-->
+                            <a href="https://aygurs.github.io/rock-paper-scissors/">
+                                <h3 class="project-title lang en">Rock, Paper, Scissors</h3>
+                                <h3 class="project-title lang fr hidden">Pierre, Papier, Ciseaux</h3>
+                                <h3 class="project-title lang es hidden">Piedra, Papel, Tijera</h3>
+                            </a>
+                            <!--Project description-->
+                            <p class="project-description lang en">Classic game coded into web format using JavaScript</p>
+                            <p class="project-description lang fr hidden">Jeu classique codé sous forme Web à l'aide de JavaScript</p>
+                            <p class="project-description lang es hidden">Juego clásico codificado en formato web usando JavaScript</p>
+                        </div>
+                    </div>
+                    <!--Landing page project card-->
+                    <div class="project-outer-card">
+                        <div class="project-card">
+                            <!--Project image-->
+                            <img src="media/images/project5.png" class="project-img" alt="Generic Landing Page Project" width="500">
+                            <!--Project title-->
+                            <a href="https://aygurs.github.io/odin-landing-page/">
+                                <h3 class="project-title lang en">Landing Page</h3>
+                                <h3 class="project-title lang fr hidden">Page d'accueil</h3>
+                                <h3 class="project-title lang es hidden">Página de destino</h3>
+                            </a>
+                            <!--Project description-->
+                            <p class="project-description lang en">Generic landing page for a website</p>
+                            <p class="project-description lang fr hidden">Page d'accueil générique d'un site Web</p>
+                            <p class="project-description lang es hidden">Página de inicio genérica para un sitio web</p>
+                        </div>
+                    </div>
+                </section>
+                </div>
+            </section>
+            <!--CONTACT SECTION-->
+            <section id="contact-container">
+                <div>
+                    <!--Map-->
+                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19634.273670743678!2d-0.7782436967968117!3d52.038136454058105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764cf882238685%3A0x161a9df74cb97e14!2sMilton%20Keynes!5e0!3m2!1sen!2suk!4v1723664639765!5m2!1sen!2suk" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div>
+                    <!--Description-->
+                    <div id="cv-text-container" class="section-text-container">
+                        <p class="section-description lang en">I'm currently located in Milton Keynes. If you would like to see my formal CV, you can download the PDF from the link below:</p>
+                        <p class="section-description lang fr hidden">Je vis actuellement à Milton Keynes. Si vous souhaitez voir mon CV officiel, vous pouvez télécharger le PDF à partir du lien ci-dessous:</p>
+                        <p class="section-description lang es hidden">Actualmente estoy ubicado en Milton Keynes. Si desea ver mi CV formal, puede descargar el PDF desde el siguiente enlace:</p>
+                        <!--Download link-->
+                        <a id="cv-download-link" href="files/CV.pdf" download>
+                            <span class="lang en">Download CV</span>
+                            <span class="lang fr hidden">Télécharger CV</span>
+                            <span class="lang es hidden">Descargar CV</span>
+                        </a>
+                    </div>
+                    <p class="section-description">
+                        <span class="lang en">If you'd like to contact me directly via email, you can email me here:</span>
+                        <span class="lang fr hidden">Si vous souhaitez me contacter directement par email, vous pouvez m'envoyer un email ici:</span>
+                        <span class="lang es hidden">Si desea contactarme directamente por correo electrónico, puede enviarme un correo electrónico aquí:</span>
+                        <button class="light-bg-link" id="email-button">
+                            <span class="lang en">email me!</span>
+                            <span class="lang fr hidden">envoyez-moi un e-mail!</span>
+                            <span class="lang es hidden">envíame un correo electrónico!</span>
+                        </button>
+                    </p>
+                </div>
+            </section>
         </main>
         <!--Footer-->
         <footer>
@@ -241,9 +401,43 @@
         <!--[3] Copied from source-->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
-            var swiper = new Swiper(".mySwiper", {
+            var swiper1 = new Swiper(".mySwiper1", {
             effect: "cards",
             grabCursor: true,
+            });
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var swiper2 = new Swiper(".mySwiper2", {
+                    spaceBetween: 30,
+                    centeredSlides: true,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination2",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            });
+        </script>
+        <!--[4] Copied from source-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.marquee').marquee({
+                duration: 15000,
+                delayBeforeStart: 0,
+                direction: 'left',
+                duplicated: true,
+                startVisible: true
+                });
             });
         </script>
     </body>
@@ -260,3 +454,7 @@
     <!--[3]-->
     <!--V Kharlampidi 'Swiper JS', 2019 [Source code]. 
     https://github.com/nolimits4web/swiper?tab=readme-ov-file -->
+
+    <!--[4]-->
+    <!--A Afridi 'jQuery.Marquee', 2017 [Source code]. 
+    https://github.com/aamirafridi/jQuery.Marquee/?tab=readme-ov-file -->
