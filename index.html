@@ -2,6 +2,7 @@
 <!--Mobile versions of sections-->
 <!--My languages section with scrolling logos-->
 <!--Portfolio and contact section-->
+<!--Make images preload to stop website moving on refresh? Or add loading screen-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +19,7 @@
         <link rel="stylesheet" href="stylesheets/nav-footer.css">
         <!--Swiper.js-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-        <link rel="stylesheet" href="stylesheets/swiper-about-section.css">
+        <link rel="stylesheet" href="stylesheets/swiper.css">
         <!--[1] Copied from source-->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
@@ -43,12 +44,12 @@
                                 <span class="lang fr hidden">À propos</span>
                                 <span class="lang es hidden">Acerca de</span>
                             </a></li>
-                            <li><a href="#portfolio-container">
+                            <li><a href="#main-portfolio-section">
                                 <span class="lang en">Portfolio</span>
                                 <span class="lang fr hidden">Portefeuille</span>
                                 <span class="lang es hidden">Portafolios</span>
                             </a></li>
-                            <li><a href="#contact-container">
+                            <li><a href="#main-contact-container">
                                 <span class="lang en">Contact</span>
                                 <span class="lang fr hidden">Contact</span>
                                 <span class="lang es hidden">Contacto</span>
@@ -69,12 +70,12 @@
                                 <span class="lang fr hidden">À propos</span>
                                 <span class="lang es hidden">Acerca de</span>
                             </a></li>
-                            <li><a href="#portfolio-container">
+                            <li><a href="#main-portfolio-section">
                                 <span class="lang en">Portfolio</span>
                                 <span class="lang fr hidden">Portefeuille</span>
                                 <span class="lang es hidden">Portafolios</span>
                             </a></li>
-                            <li><a href="#contact-container">
+                            <li><a href="#main-contact-container">
                                 <span class="lang en">Contact</span>
                                 <span class="lang fr hidden">Contact</span>
                                 <span class="lang es hidden">Contacto</span>
@@ -143,7 +144,7 @@
             </div>
             <!--About Section-->
             <div id="about-container" >
-                <section id="about-text-container" data-aos="fade-right" data-aos-duration="800" data-aos-offset="100">
+                <section id="about-text-container" data-aos="fade-right" data-aos-duration="800">
                     <h2 class="section-title lang en">About me</h2>
                     <h2 class="section-title lang fr">À propos de moi</h2>
                     <h2 class="section-title lang es">Acerca de mí</h2>
@@ -169,7 +170,7 @@
                 </section>
                 <!--Swiper.js images-->
                 <!--[3] Copied divs from source demo and altered to how many I want-->
-                <div class="swiper1 mySwiper1" data-aos="fade-right" data-aos-duration="800" data-aos-offset="100">
+                <div class="swiper1 mySwiper1" data-aos="fade-right" data-aos-duration="800">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"></div>
                         <div class="swiper-slide"></div>
@@ -183,9 +184,9 @@
                 </div>
             </div>
             <!--Portfolio Section-->
-            <section id="portfolio-container">
+            <section id="main-portfolio-section">
                 <!--Scrolling marquee [4]-->
-                <div id="languages-logo-container" class='marquee'>
+                <div id="languages-logo-container" class='marquee' data-aos="fade-left" data-aos-duration="800">
                     <img src="media/images/html-logo.png" class="languages-img" alt="HTML Logo" width="70">
                     <img src="media/images/css-logo.png" class="languages-img" alt="CSS Logo" width="70">
                     <img src="media/images/js-logo.png" class="languages-img" alt="Javascript Logo" width="70">
@@ -201,12 +202,12 @@
                     <img src="media/images/js-logo.png" class="languages-img" alt="Javascript Logo" width="70">
                     <img src="media/images/python-logo.png" class="languages-img" alt="Python Logo" width="80">
                 </div>
-                <div>
-                    <h2>Portfolio</h2>
+                <div id="feature-project-container" data-aos="fade-up" data-aos-duration="800">
+                    <h2 class="section-title">Portfolio</h2>
                     <div id="feature-project-card-outer">
                         <div id="feature-project-card">
                             <!--Feature project images-->
-                            <!--[2] Copied div layout from source demo-->
+                            <!--[3] Copied div layout from source demo-->
                             <div class="swiper2 mySwiper2">
                                 <div class="swiper-wrapper">
                                   <div class="swiper-slide two"></div>
@@ -235,9 +236,9 @@
                             </div>
                         </div>
                     </div>
-                </section>
-                <!--Other Projects Section-->
-                <section id="projects-section" data-aos="fade-up" data-aos-duration="800">
+            </section>
+            <!--Other Projects Section-->
+            <section id="projects-section" data-aos="fade-up" data-aos-duration="800">
                     <!--Other Project Cards-->
                     <!--Calculator project card-->
                     <div class="project-outer-card">
@@ -311,34 +312,37 @@
                 </div>
             </section>
             <!--CONTACT SECTION-->
-            <section id="contact-container">
-                <div>
-                    <!--Map-->
-                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19634.273670743678!2d-0.7782436967968117!3d52.038136454058105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764cf882238685%3A0x161a9df74cb97e14!2sMilton%20Keynes!5e0!3m2!1sen!2suk!4v1723664639765!5m2!1sen!2suk" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div>
-                    <!--Description-->
-                    <div id="cv-text-container" class="section-text-container">
-                        <p class="section-description lang en">I'm currently located in Milton Keynes. If you would like to see my formal CV, you can download the PDF from the link below:</p>
-                        <p class="section-description lang fr hidden">Je vis actuellement à Milton Keynes. Si vous souhaitez voir mon CV officiel, vous pouvez télécharger le PDF à partir du lien ci-dessous:</p>
-                        <p class="section-description lang es hidden">Actualmente estoy ubicado en Milton Keynes. Si desea ver mi CV formal, puede descargar el PDF desde el siguiente enlace:</p>
-                        <!--Download link-->
-                        <a id="cv-download-link" href="files/CV.pdf" download>
-                            <span class="lang en">Download CV</span>
-                            <span class="lang fr hidden">Télécharger CV</span>
-                            <span class="lang es hidden">Descargar CV</span>
-                        </a>
+            <section id="main-contact-container">
+                <h2 class="section-title" data-aos="fade-right" data-aos-duration="800">Contact</h2>
+                <div id="contact-content-container" data-aos="fade-right" data-aos-duration="800">
+                    <div id="contact-map">
+                        <!--Map-->
+                        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19634.273670743678!2d-0.7782436967968117!3d52.038136454058105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764cf882238685%3A0x161a9df74cb97e14!2sMilton%20Keynes!5e0!3m2!1sen!2suk!4v1723664639765!5m2!1sen!2suk" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <p class="section-description">
-                        <span class="lang en">If you'd like to contact me directly via email, you can email me here:</span>
-                        <span class="lang fr hidden">Si vous souhaitez me contacter directement par email, vous pouvez m'envoyer un email ici:</span>
-                        <span class="lang es hidden">Si desea contactarme directamente por correo electrónico, puede enviarme un correo electrónico aquí:</span>
-                        <button class="light-bg-link" id="email-button">
-                            <span class="lang en">email me!</span>
-                            <span class="lang fr hidden">envoyez-moi un e-mail!</span>
-                            <span class="lang es hidden">envíame un correo electrónico!</span>
-                        </button>
-                    </p>
+                    <div id="contact-desc">
+                        <!--Description-->
+                        <div id="cv-text-container">
+                            <p class="section-description lang en">I'm currently located in Milton Keynes. If you would like to see my formal CV, you can download the PDF from the link below:</p>
+                            <p class="section-description lang fr hidden">Je vis actuellement à Milton Keynes. Si vous souhaitez voir mon CV officiel, vous pouvez télécharger le PDF à partir du lien ci-dessous:</p>
+                            <p class="section-description lang es hidden">Actualmente estoy ubicado en Milton Keynes. Si desea ver mi CV formal, puede descargar el PDF desde el siguiente enlace:</p>
+                            <!--Download link-->
+                            <a id="cv-download-link" href="files/CV.pdf" download>
+                                <span class="lang en">Download CV</span>
+                                <span class="lang fr hidden">Télécharger CV</span>
+                                <span class="lang es hidden">Descargar CV</span>
+                            </a>
+                        </div>
+                        <p id="contact-email-container">
+                            <span class="lang en">If you'd like to contact me directly via email, you can email me here:</span>
+                            <span class="lang fr hidden">Si vous souhaitez me contacter directement par email, vous pouvez m'envoyer un email ici:</span>
+                            <span class="lang es hidden">Si desea contactarme directamente por correo electrónico, puede enviarme un correo electrónico aquí:</span>
+                            <button class="light-bg-link" id="email-button">
+                                <span class="lang en">email me!</span>
+                                <span class="lang fr hidden">envoyez-moi un e-mail!</span>
+                                <span class="lang es hidden">envíame un correo electrónico!</span>
+                            </button>
+                        </p>
+                    </div>
                 </div>
             </section>
         </main>

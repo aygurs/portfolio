@@ -18,48 +18,56 @@ and then altered by me to fit website needs*/
     background-image: url('../media/images/slider1.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 10px;
     }
     
     .swiper-slide:nth-child(2n) {
     background-image: url('../media/images/slider2.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 10px;
     }
     
     .swiper-slide:nth-child(3n) {
     background-image: url('../media/images/slider3.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 10px;
     }
     
     .swiper-slide:nth-child(4n) {
     background-image: url('../media/images/slider4.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 10px;
     }
     
     .swiper-slide:nth-child(5n) {
     background-image: url('../media/images/slider5.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 10px;
     }
     
     .swiper-slide:nth-child(6n) {
     background-image: url('../media/images/slider6.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 10px;
     }
     
     .swiper-slide:nth-child(7n) {
     background-image: url('../media/images/slider7.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 10px;
     }
     
     .swiper-slide:nth-child(8n) {
     background-image: url('../media/images/slider8.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 10px;
     }
     /*Tablet Screen*/
     @media only screen and (max-width: 992px){
@@ -81,8 +89,19 @@ and then altered by me to fit website needs*/
     .swiper2 {
         width: 30em;
         max-width: 30em;
-        height: 350px;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 2em;
+    }
+    .swiper-pagination2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
     }
     .swiper-slide.two {
         text-align: center;
@@ -99,18 +118,21 @@ and then altered by me to fit website needs*/
         background-image: url('../media/images/project1.png');
         background-size: cover;
         background-position: center;
+        border-radius: 10px;
     }
         
     .swiper-slide.two:nth-child(2n) {
         background-image: url('../media/images/project1.1.png');
         background-size: cover;
         background-position: center;
+        border-radius: 10px;
     }
         
     .swiper-slide.two:nth-child(3n) {
         background-image: url('../media/images/project1.2.png');
         background-size: cover;
         background-position: center;
+        border-radius: 10px;
     }
 
     /*CITATIONS*/

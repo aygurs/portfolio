@@ -373,7 +373,7 @@ a {
   /*Container for the text of about section*/
   #about-text-container{
     max-width: 50em;
-    margin-right: 2em;
+    margin-right: 3em;
   }
   /*Text in about container*/
   #about-container p{
@@ -392,6 +392,19 @@ a {
 
 /*PORTFOLIO SECTION*/
 
+#main-portfolio-section{
+  padding-top: 10em;
+  overflow: hidden;
+}
+
+#feature-project-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3em 7em 3em 7em
+}
+
 /*Logo images*/
 .languages-img{
   padding-right: 11em;
@@ -401,7 +414,7 @@ a {
 #languages-logo-container{
   overflow: hidden;
   width: 100%;
-  padding-top: 2em;
+  margin-bottom: 6em;
 }
 /*Animation on card hover*/
 @keyframes cycle {
@@ -481,6 +494,7 @@ a {
   align-items: center;
   flex-wrap: wrap;
   padding: 2em;
+  padding-bottom: 8em;
   justify-content: center;
 }
 /*Outer container for all project cards*/
@@ -523,7 +537,31 @@ a {
 }
 
 /*CONTACT SECTION*/
-#contact-container{
+
+#main-contact-container{
   background-color: var(--primary);
   color: var(--tertiary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8em 7em 8em 7em
+}
+
+#contact-content-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3em;
+}
+
+#contact-desc{
+  margin-left: 5em;
+  text-align: center;
+}
+#contact-email-container{
+  margin-top: 1em;
+}
+#cv-download-link{
+  background-color: var(--tertiary);
 }
