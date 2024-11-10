@@ -87,21 +87,23 @@ and then altered by me to fit website needs*/
 
     /*About section swiper*/
     .swiper2 {
-        width: 30em;
-        max-width: 30em;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
         overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding-top: 2em;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
     }
     .swiper-pagination2{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 1em;
-        padding-bottom: 1em;
+        position: absolute;
+        text-align: center;
+        transition: .3s opacity;
+        transform: translate3d(0, 0, 0);
+        z-index: 10;
     }
     .swiper-slide.two {
         text-align: center;

@@ -552,7 +552,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 8em 7em 8em 7em
+  padding: 8em 7em 8em 7em;
 }
 
 #contact-content-container{
@@ -560,11 +560,16 @@ a {
   align-items: center;
   justify-content: center;
   padding-top: 3em;
+  flex-wrap: wrap;
 }
 
 #contact-desc{
-  margin-left: 5em;
   text-align: center;
+  max-width: 30em;
+  margin: 0em 2.5em 0em 2.5em;
+}
+#map{
+  margin: 0em 2.5em 0em 2.5em;
 }
 #contact-email-container{
   margin-top: 1em;
