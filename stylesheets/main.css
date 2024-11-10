@@ -216,6 +216,7 @@ a {
 /*Main image*/
 #hero-img{
   width: 350px;
+  border-radius: 10px;
 }
 /*Container for logos*/
 #hero-img-logos{
