@@ -9,8 +9,8 @@ and then altered by me to fit website needs*/
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 18px;
     font-size: 22px;
+    margin-right: 3em;
     font-weight: bold;
     color: #fff;
     }
@@ -18,56 +18,56 @@ and then altered by me to fit website needs*/
     background-image: url('../media/images/slider1.jpg');
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
+    border-radius: 18px;
     }
     
     .swiper-slide:nth-child(2n) {
     background-image: url('../media/images/slider2.jpg');
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
+    border-radius: 18px;
     }
     
     .swiper-slide:nth-child(3n) {
     background-image: url('../media/images/slider3.jpg');
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
+    border-radius: 18px;
     }
     
     .swiper-slide:nth-child(4n) {
     background-image: url('../media/images/slider4.jpg');
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
+    border-radius: 18px;
     }
     
     .swiper-slide:nth-child(5n) {
     background-image: url('../media/images/slider5.jpg');
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
+    border-radius: 18px;
     }
     
     .swiper-slide:nth-child(6n) {
     background-image: url('../media/images/slider6.jpg');
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
+    border-radius: 18px;
     }
     
     .swiper-slide:nth-child(7n) {
     background-image: url('../media/images/slider7.jpg');
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
+    border-radius: 18px;
     }
     
     .swiper-slide:nth-child(8n) {
     background-image: url('../media/images/slider8.jpg');
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
+    border-radius: 18px;
     }
     /*Tablet Screen*/
     @media only screen and (max-width: 992px){

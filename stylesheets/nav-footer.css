@@ -15,6 +15,11 @@ nav{
     background-color: var(--tertiary);
     color: var(--primary);
 }
+#logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /*Holds all buttons in nav bar (Home-Access Button)*/
 #nav-button-main-container{
     display: flex;

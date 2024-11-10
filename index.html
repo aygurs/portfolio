@@ -28,7 +28,7 @@
         <header>
             <nav id="nav">
                 <!--Logo-->
-                <a href="index.html"><img src="media/images/logo-white.png" id="logo" alt="AyDev Logo" width="120"></a>
+                <a id="logo-container" href="index.html"><img src="media/images/logo-white.png" id="logo" alt="AyDev Logo" width="120"></a>
                 <!--Whole Nav Button container-->
                 <div id="nav-button-main-container">
                     <!--Main Navigation Buttons-->
@@ -39,12 +39,12 @@
                                 <span class="lang fr hidden">Accueil</span>
                                 <span class="lang es hidden">Inicio</span>
                             </a></li>
-                            <li><a href="#about-container">
+                            <li><a href="#main-about-container">
                                 <span class="lang en">About</span>
                                 <span class="lang fr hidden">À propos</span>
                                 <span class="lang es hidden">Acerca de</span>
                             </a></li>
-                            <li><a href="#main-portfolio-section">
+                            <li><a href="#main-portfolio-container">
                                 <span class="lang en">Portfolio</span>
                                 <span class="lang fr hidden">Portefeuille</span>
                                 <span class="lang es hidden">Portafolios</span>
@@ -65,12 +65,12 @@
                                 <span class="lang fr hidden">Accueil</span>
                                 <span class="lang es hidden">Inicio</span>
                             </a></li>
-                            <li><a href="#about-container">
+                            <li><a href="#main-about-container">
                                 <span class="lang en">About</span>
                                 <span class="lang fr hidden">À propos</span>
                                 <span class="lang es hidden">Acerca de</span>
                             </a></li>
-                            <li><a href="#main-portfolio-section">
+                            <li><a href="#main-portfolio-container">
                                 <span class="lang en">Portfolio</span>
                                 <span class="lang fr hidden">Portefeuille</span>
                                 <span class="lang es hidden">Portafolios</span>
@@ -116,12 +116,12 @@
                     </div>
                     <!--Portfolio and contact buttons-->
                     <div id="hero-buttons-container">
-                        <button id="hero-button-portfolio" onclick="location.href = '#portfolio-container'">
+                        <button id="hero-button-portfolio" onclick="location.href = '#main-portfolio-container'">
                             <span class="lang en">Portfolio</span>
                             <span class="lang fr hidden">Portefeuille</span>
                             <span class="lang es hidden">Portafolio</span>
                         </button>
-                        <a href="#contact-container" id="hero-button-contact">
+                        <a href="#main-contact-container" id="hero-button-contact">
                             <span class="lang en">Contact Me</span>
                             <span class="lang fr hidden">Contactez-moi</span>
                             <span class="lang es hidden">Contactame</span>
@@ -143,7 +143,7 @@
                 </div>
             </div>
             <!--About Section-->
-            <div id="about-container" >
+            <div id="main-about-container">
                 <section id="about-text-container" data-aos="fade-right" data-aos-duration="800">
                     <h2 class="section-title lang en">About me</h2>
                     <h2 class="section-title lang fr">À propos de moi</h2>
@@ -184,7 +184,7 @@
                 </div>
             </div>
             <!--Portfolio Section-->
-            <section id="main-portfolio-section">
+            <section id="main-portfolio-container">
                 <!--Scrolling marquee [4]-->
                 <div id="languages-logo-container" class='marquee' data-aos="fade-left" data-aos-duration="800">
                     <img src="media/images/html-logo.png" class="languages-img" alt="HTML Logo" width="70">
@@ -204,7 +204,7 @@
                 </div>
                 <div id="feature-project-container" data-aos="fade-up" data-aos-duration="800">
                     <h2 class="section-title">Portfolio</h2>
-                    <div id="feature-project-card-outer">
+                    <div id="feature-project-card-outer"> <!--This is for the animated border-->
                         <div id="feature-project-card">
                             <!--Feature project images-->
                             <!--[3] Copied div layout from source demo-->
@@ -241,7 +241,7 @@
             <section id="projects-section" data-aos="fade-up" data-aos-duration="800">
                     <!--Other Project Cards-->
                     <!--Calculator project card-->
-                    <div class="project-outer-card">
+                    <div class="project-outer-card"> <!--This is for the animated border-->
                         <div class="project-card">
                             <!--Project image-->
                             <img src="media/images/project2.png" class="project-img" alt="Calculator Project" width="500">
@@ -258,7 +258,7 @@
                         </div>
                     </div>
                     <!--Etch-a-sketch project card-->
-                    <div class="project-outer-card">
+                    <div class="project-outer-card"> <!--This is for the animated border-->
                         <div class="project-card">
                             <!--Project image-->
                             <img src="media/images/project3.png" class="project-img" alt="Etch-a-sketch Project" width="500">
@@ -275,7 +275,7 @@
                         </div>
                     </div>
                     <!--Rock, paper, scissors project card-->
-                    <div class="project-outer-card">
+                    <div class="project-outer-card"> <!--This is for the animated border-->
                         <div class="project-card">
                             <!--Project image-->
                             <img src="media/images/project4.png" class="project-img" alt="Rock, paper, scissors Project" width="500">
@@ -292,7 +292,7 @@
                         </div>
                     </div>
                     <!--Landing page project card-->
-                    <div class="project-outer-card">
+                    <div class="project-outer-card"> <!--This is for the animated border-->
                         <div class="project-card">
                             <!--Project image-->
                             <img src="media/images/project5.png" class="project-img" alt="Generic Landing Page Project" width="500">
@@ -321,26 +321,15 @@
                     </div>
                     <div id="contact-desc">
                         <!--Description-->
-                        <div id="cv-text-container">
-                            <p class="section-description lang en">I'm currently located in Milton Keynes. If you would like to see my formal CV, you can download the PDF from the link below:</p>
-                            <p class="section-description lang fr hidden">Je vis actuellement à Milton Keynes. Si vous souhaitez voir mon CV officiel, vous pouvez télécharger le PDF à partir du lien ci-dessous:</p>
-                            <p class="section-description lang es hidden">Actualmente estoy ubicado en Milton Keynes. Si desea ver mi CV formal, puede descargar el PDF desde el siguiente enlace:</p>
-                            <!--Download link-->
-                            <a id="cv-download-link" href="files/CV.pdf" download>
-                                <span class="lang en">Download CV</span>
-                                <span class="lang fr hidden">Télécharger CV</span>
-                                <span class="lang es hidden">Descargar CV</span>
-                            </a>
-                        </div>
                         <p id="contact-email-container">
-                            <span class="lang en">If you'd like to contact me directly via email, you can email me here:</span>
-                            <span class="lang fr hidden">Si vous souhaitez me contacter directement par email, vous pouvez m'envoyer un email ici:</span>
-                            <span class="lang es hidden">Si desea contactarme directamente por correo electrónico, puede enviarme un correo electrónico aquí:</span>
-                            <button class="light-bg-link" id="email-button">
+                            <span class="lang en">I'm currently located in Milton Keynes. If you'd like to view my formal CV or get in contact with me, you can send me an email here:<br><br></span>
+                            <span class="lang fr hidden">Je vis actuellement à Milton Keynes. Si vous souhaitez consulter mon CV officiel ou me contacter, vous pouvez m'envoyer un email ici:<br><br></span>
+                            <span class="lang es hidden">Actualmente estoy ubicado en Milton Keynes. Si deseas ver mi CV formal o ponerte en contacto conmigo, puedes enviarme un correo electrónico aquí:<br><br></span>
+                            <a class="light-bg-link" href="mailto:aydinagursoy@gmail.com">
                                 <span class="lang en">email me!</span>
                                 <span class="lang fr hidden">envoyez-moi un e-mail!</span>
                                 <span class="lang es hidden">envíame un correo electrónico!</span>
-                            </button>
+                            </a>
                         </p>
                     </div>
                 </div>

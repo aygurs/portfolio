@@ -191,6 +191,11 @@ a {
     font-weight: 400;
     border-bottom: 2px solid var(--secondary);
   }
+.project-title{
+  font-size: 1.6em;
+  font-weight: 400;
+  margin: 0.5em 0em 0.5em 0em;
+}
 
 /*Main container holding text, portrait and logos*/
 #hero-main-container{
@@ -364,26 +369,24 @@ a {
 /*ABOUT SECTION*/
 
 /*Container for about section*/
-#about-container{
+#main-about-container{
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--primary);
+    color: var(--tertiary);
     padding: 10em 7em 8em 7em
   }
   /*Container for the text of about section*/
   #about-text-container{
-    max-width: 50em;
-    margin-right: 3em;
+    max-width: 45em;
+    margin-right: 7em;
   }
   /*Text in about container*/
-  #about-container p{
+  #main-about-container p{
     background-color: var(--primary);
     color: var(--tertiary);
     font-size: 1.2em;
-  }
-  #about-container h2{
-    color: var(--tertiary);
   }
   /*UOL Logo*/
   #education-img{
@@ -393,7 +396,7 @@ a {
 
 /*PORTFOLIO SECTION*/
 
-#main-portfolio-section{
+#main-portfolio-container{
   padding-top: 10em;
   overflow: hidden;
 }
@@ -454,10 +457,13 @@ a {
   height: 1500px;
   width: 1500px;
   background: conic-gradient(
-    transparent 0deg 90deg,
-    var(--secondary) 90deg 180deg,
-    transparent 180deg 270deg,
-    var(--secondary) 270deg 360deg
+    from 0deg,
+    transparent 20deg,
+    var(--secondary) 80deg,
+    transparent 140deg,
+    transparent 200deg,
+    var(--secondary) 260deg,
+    transparent 320deg
   );
   position: absolute;
   animation: rotate 8s linear infinite;
@@ -563,6 +569,8 @@ a {
 #contact-email-container{
   margin-top: 1em;
 }
-#cv-download-link{
+.light-bg-link{
   background-color: var(--tertiary);
+  padding: 0.2em 0.5em;
+  border-radius: 5px;
 }
