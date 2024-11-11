@@ -316,6 +316,9 @@ a {
 
 /*Phone screen*/
 @media only screen and (max-width: 600px){
+  #hero-main-container{
+    margin: 5em 12vw 5em 12vw;
+  }
   /*Font size change*/
   #hero-text-container{
     font-size: 0.7em;
@@ -394,6 +397,36 @@ a {
     padding-top: 2em;
   }
 
+  /*Tablet screen*/
+  @media only screen and (max-width: 992px){
+    #main-about-container{
+      flex-wrap: wrap;
+    }
+    #about-text-container{
+      margin-right: 0em;
+      text-align: center;
+      margin-bottom: 5em;
+    }
+  }
+
+  /*Phone screen*/
+  @media only screen and (max-width: 600px){
+    #main-about-container{
+      padding: 8em 5em 6em 5em;
+    }
+    #about-text-container{
+      font-size: 0.8em;
+    }
+    #education-img{
+      width: 250px;
+    }
+    #swiperid1{
+      width: 15em;
+      max-width: 15em;
+      height: 15em;
+    }
+  }
+
 /*PORTFOLIO SECTION*/
 
 #main-portfolio-container{
@@ -406,7 +439,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3em 7em 3em 7em
+  padding: 3em 5em 3em 5em
 }
 
 /*Logo images*/
@@ -438,6 +471,7 @@ a {
 /*Curve all image borders*/
 .project-img{
   border-radius: 10px;
+  max-width: 30em;
 }
 /*Outer div for feature card*/
 #feature-project-card-outer{
@@ -543,6 +577,50 @@ a {
   background-color: var(--tertiary);
 }
 
+/*Tablet screen*/
+@media only screen and (max-width: 992px){
+  #feature-project-card{
+    flex-wrap: wrap;
+  }
+  #feature-project-description{
+    border-left: 0px;
+    margin-left: 0em;
+  }
+  .project-title.feature{
+    border-bottom: 2px solid var(--secondary)
+  }
+  #map{
+    width: 450px;
+  }
+}
+
+/*Phone screen*/
+@media only screen and (max-width: 600px){
+  #main-portfolio-container{
+    padding-top: 7em;
+  }
+  #feature-project-container{
+    padding: 1em;
+  }
+  #projects-section{
+    padding: 0em 2em 2em 2em;
+  }
+  .project-title{
+    font-size: 1.3em;
+  }
+  .project-card{
+    padding: 0em;
+    padding-bottom: 1em;
+    text-align: center;
+  }
+  .project-img{
+    max-width: 20em;
+  }
+  .project-outer-card{
+    margin: 1em;
+  }
+}
+
 /*CONTACT SECTION*/
 
 #main-contact-container{
@@ -578,4 +656,12 @@ a {
   background-color: var(--tertiary);
   padding: 0.2em 0.5em;
   border-radius: 5px;
+}
+
+/*Phone screen*/
+@media only screen and (max-width: 600px){
+  #map{
+    width: 70vw;
+    height: 20em;
+  }
 }
