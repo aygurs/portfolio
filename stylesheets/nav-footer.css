@@ -181,7 +181,7 @@ nav{
 @media only screen and (max-width: 600px){
     /*Decreases padding on mobile version*/
     nav{
-        padding: 1em 3em;
+        padding: 1em 2em;
     }
     #footer-totop-button-container{
         bottom: 5em;

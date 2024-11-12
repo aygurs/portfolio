@@ -136,6 +136,16 @@ and then altered by me to fit website needs*/
         background-position: center;
         border-radius: 10px;
     }
+    /*Tablet Screen*/
+    @media only screen and (max-width: 992px){
+        /**/
+    }
+    /*Phone screen*/
+    @media only screen and (max-width: 600px){
+    .swiper-slide.two{
+        height: 13em;
+        }
+    }
 
     /*CITATIONS*/
         /*V Kharlampidi 'Swiper JS', 2019 [Source code]. 

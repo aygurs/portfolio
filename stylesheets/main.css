@@ -166,6 +166,44 @@ a {
   text-decoration: none;
 }
 
+/*Global classes*/
+.section-title{
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  font-size: 2em;
+  font-weight: 400;
+  border-bottom: 2px solid var(--secondary);
+}
+.project-title{
+font-size: 1.6em;
+font-weight: 400;
+margin: 0.5em 0em 0.5em 0em;
+}
+.project-title.general{
+  border-bottom: 2px solid var(--secondary);
+}
+
+/*Tablet screen*/
+@media only screen and (max-width: 992px){
+  .project-description{
+    text-align: center;
+  }
+}
+
+/*Phone screen*/
+@media only screen and (max-width: 600px){
+  .section-title{
+    font-size: 1.2em;
+  }
+  .project-description{
+    font-size: 0.8em;
+    text-align: center;
+  }
+  .project-title{
+    font-size: 1.1em;
+  }
+}
+
 /*-----------------HOME PAGE-----------------*/
 /*Hides languages until they're shown*/
 .hidden{
@@ -181,20 +219,6 @@ a {
     transform: translateY(0%);
     opacity: 1;
   }
-}
-
-/*Global classes*/
-.section-title{
-    margin-bottom: 1em;
-    padding-bottom: 0.5em;
-    font-size: 2em;
-    font-weight: 400;
-    border-bottom: 2px solid var(--secondary);
-  }
-.project-title{
-  font-size: 1.6em;
-  font-weight: 400;
-  margin: 0.5em 0em 0.5em 0em;
 }
 
 /*Main container holding text, portrait and logos*/
@@ -257,6 +281,7 @@ a {
 /*Container for the main hero text (no buttons)*/
 #hero-text-container{
   font-size: 1.3em;
+  text-align: left;
 }
 /*Text for only the name*/
 #hero-text-container h1{
@@ -322,6 +347,7 @@ a {
   /*Font size change*/
   #hero-text-container{
     font-size: 0.7em;
+    min-height: 17vh;
   }
   /*Image size change*/
   #hero-img{
@@ -342,7 +368,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    margin: 0em 1.3em 5em 1.3em;
   }
   /*Buttons container padding*/
   #hero-buttons-container{
@@ -378,7 +404,8 @@ a {
     justify-content: center;
     background-color: var(--primary);
     color: var(--tertiary);
-    padding: 10em 7em 8em 7em
+    padding: 10em 7em 8em 7em;
+    overflow: hidden;
   }
   /*Container for the text of about section*/
   #about-text-container{
@@ -401,6 +428,7 @@ a {
   @media only screen and (max-width: 992px){
     #main-about-container{
       flex-wrap: wrap;
+      padding: 10em 5em 8em 5em;
     }
     #about-text-container{
       margin-right: 0em;
@@ -412,9 +440,9 @@ a {
   /*Phone screen*/
   @media only screen and (max-width: 600px){
     #main-about-container{
-      padding: 8em 5em 6em 5em;
+      padding: 8em 3em 6em 3em;
     }
-    #about-text-container{
+    #about-text-container p{
       font-size: 0.8em;
     }
     #education-img{
@@ -582,12 +610,16 @@ a {
   #feature-project-card{
     flex-wrap: wrap;
   }
+  #feature-project-container{
+    padding: 3em 3em 3em 3em;
+  }
   #feature-project-description{
     border-left: 0px;
     margin-left: 0em;
   }
   .project-title.feature{
-    border-bottom: 2px solid var(--secondary)
+    border-bottom: 2px solid var(--secondary);
+    text-align: center;
   }
   #map{
     width: 450px;
@@ -605,9 +637,6 @@ a {
   #projects-section{
     padding: 0em 2em 2em 2em;
   }
-  .project-title{
-    font-size: 1.3em;
-  }
   .project-card{
     padding: 0em;
     padding-bottom: 1em;
@@ -618,6 +647,14 @@ a {
   }
   .project-outer-card{
     margin: 1em;
+  }
+  .languages-img{
+    width: 50px;
+    padding-right: 5em;
+  }
+  .project-title.feature{
+    font-size: 1.1em;
+    text-align: center;
   }
 }
 
@@ -631,6 +668,7 @@ a {
   align-items: center;
   justify-content: center;
   padding: 8em 7em 8em 7em;
+  overflow: hidden;
 }
 
 #contact-content-container{
@@ -663,5 +701,14 @@ a {
   #map{
     width: 70vw;
     height: 20em;
+  }
+  #main-contact-container{
+    padding: 8em 4em 8em 4em;
+  }
+  #main-contact-container p{
+    font-size: 0.8em;
+  }
+  #contact-content-container{
+    padding-top: 2em;
   }
 }
