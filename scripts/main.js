@@ -66,13 +66,14 @@ function fontSizeChange() {
     })  
 }
 
+//TEMPORARY DEPRECATED - Dark/Light mode function
 //Dark or Light mode button
 //Store theme in local storage, default is dark (this is here in case separate pages are added in the future)
 //It says 'light' as default, but function is ran on load so it will be opposite
 let currentMode = localStorage.getItem('theme') || 'light'
 //Target button
-let modeButton = document.getElementById('mode-button');
-modeButton.addEventListener("click", modeCheck)
+// let modeButton = document.getElementById('mode-button');
+// modeButton.addEventListener("click", modeCheck)
 //Map is used to keep ordered list with key:values
 let originalBgColours = new Map();
 
@@ -105,7 +106,6 @@ function modeChange() {
     let fbLogo = document.getElementById("footer-fb-logo");
     let linkedinLogo = document.getElementById("footer-linkedin-logo");
     let githubLogo = document.getElementById("footer-github-logo");
-    let educationLogo = document.getElementById("education-img");
     let links = document.querySelectorAll('a');
 
     //Loops over each element
@@ -137,7 +137,6 @@ function modeChange() {
                 fbLogo.src = "media/images/fb-logo-black.png"
                 linkedinLogo.src = "media/images/linkedin-logo-black.png"
                 githubLogo.src = "media/images/github-logo-black.png"
-                educationLogo.src = "media/images/education-img.svg"
             }
             //If bg colour is light, and original bg colour was light, turn to dark
             else if(currentBgColour === 'rgb(250, 249, 246)' && originalBgColour === 'rgb(250, 249, 246)'){
@@ -166,7 +165,6 @@ function modeChange() {
                 fbLogo.src = "media/images/fb-logo-white.png"
                 linkedinLogo.src = "media/images/linkedin-logo-white.png"
                 githubLogo.src = "media/images/github-logo-white.png"
-                educationLogo.src = "media/images/education-img2.png"
             }
             //If bg colour is dark, and original bg colour was light, turn to light
             else if(currentBgColour === 'rgb(15, 29, 43)' && originalBgColour === 'rgb(250, 249, 246)'){
@@ -237,3 +235,18 @@ function switchLanguage(lang){
 }
 //Runs on load
 switchLanguage(currentLang)
+
+document.addEventListener("scroll", function () {
+    const nav = document.querySelector("nav");
+    const hero = document.querySelector("#hero-main-container");
+    const accessMenu = document.getElementById('nav-access-menu');
+    const navReappearPoint = hero.offsetTop + 150;
+
+    if (window.scrollY > navReappearPoint) {
+        nav.classList.add("scrolled");
+        accessMenu.classList.add("scrolled");
+    } else {
+        nav.classList.remove("scrolled");
+        accessMenu.classList.remove("scrolled");
+    }
+});
