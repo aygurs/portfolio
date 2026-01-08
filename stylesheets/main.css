@@ -116,7 +116,7 @@
 :root {
     /*Website Colour Scheme*/
     --primary: rgb(250, 249, 246);
-    --secondary: rgb(3, 169, 244);
+    --secondary: rgb(31, 117, 178);
     --tertiary: rgb(15, 29, 43);
 }
 
@@ -136,9 +136,6 @@ html, body {
 figure{
   border: 0;
   margin: 0;
-}
-main{
-  margin-top: 103px;
 }
 /* Reset List Styles */
 ul {
@@ -226,7 +223,7 @@ margin: 0.5em 0em 0.5em 0em;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 11em 15vw 7em 15vw;
+    padding: 16em 15vw 12em 15vw;
     animation: 1.5s fadeInUp;
 }
 /*Container for portrait and logos*/
@@ -404,7 +401,7 @@ margin: 0.5em 0em 0.5em 0em;
     justify-content: center;
     background-color: var(--primary);
     color: var(--tertiary);
-    padding: 10em 7em 8em 7em;
+    padding: 10em 7em 10em 7em;
     overflow: hidden;
   }
   /*Container for the text of about section*/
@@ -418,10 +415,27 @@ margin: 0.5em 0em 0.5em 0em;
     color: var(--tertiary);
     font-size: 1.2em;
   }
-  /*UOL Logo*/
-  #education-img{
-    width: 300px;
-    padding-top: 2em;
+
+  #blog-link{
+    color: var(--secondary) !important;
+  }
+
+  #swiper-text{
+    margin-top: 1em;
+    font-size: 0.8em !important;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 1279px){
+    #main-about-container{
+      flex-wrap: wrap;
+      padding: 10em 5em 8em 5em;
+    }
+    #about-text-container{
+      margin-right: 0em;
+      text-align: center;
+      margin-bottom: 5em;
+    }
   }
 
   /*Tablet screen*/
@@ -444,9 +458,6 @@ margin: 0.5em 0em 0.5em 0em;
     }
     #about-text-container p{
       font-size: 0.8em;
-    }
-    #education-img{
-      width: 250px;
     }
     #swiperid1{
       width: 15em;
@@ -691,7 +702,7 @@ margin: 0.5em 0em 0.5em 0em;
   margin-top: 1em;
 }
 .light-bg-link{
-  background-color: var(--tertiary);
+  background-color: var(--secondary);
   padding: 0.2em 0.5em;
   border-radius: 5px;
 }

@@ -14,11 +14,6 @@
         <meta name='robots' content='noindex, nofollow'>
         <link rel="stylesheet" href="stylesheets/main.css">
         <link rel="stylesheet" href="stylesheets/nav-footer.css">
-        <!--Swiper.js-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-        <link rel="stylesheet" href="stylesheets/swiper.css">
-        <!--[1] Copied from source-->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
         <!--Navigation Bar-->
@@ -55,7 +50,7 @@
                     </div>
                     <!--Hamburger menu on smaller devices-->
                     <div id="hamburger-buttons-container">
-                        <button onclick="openHamburgerMenu()" id="nav-hamburger-menu">☰</button>
+                        <button id="nav-hamburger-menu">☰</button>
                         <ul id="hamburger-list">
                             <li><a href="index.html">
                                 <span class="lang en">Home</span>
@@ -81,13 +76,13 @@
                     </div>
                     <!--Accessibility Nav menu-->
                     <div id="nav-access-button-container">
-                        <button onclick="openAccessMenu()" id="access-button"><img src="media/images/accessibility-logo.png" id="nav-access-img" alt="Accessibility Button" width="30"></button>
+                        <button id="access-button"><img src="media/images/accessibility-logo.png" id="nav-access-img" alt="Accessibility Button" width="30"></button>
                         <div id="nav-access-menu">
                             <button class="access-button"><img src="media/images/text-increase-icon-white.png" id="font-increase-button" class="nav-access-menu-img" alt="Increase Text Size" width="30"></button>
-                            <button class="access-button"><img src="media/images/sun-icon-white.png" id="mode-button" class="nav-access-menu-img" alt="Light Mode" width="30"></button>
-                            <button class="access-button" onclick="switchLanguage('en')"><img src="media/images/en-icon-white.png" id="english-lang-button" class="nav-access-menu-img" alt="English Language" width="30"></button>
-                            <button class="access-button" onclick="switchLanguage('fr')"><img src="media/images/fr-icon-white.png" id="french-lang-button" class="nav-access-menu-img" alt="French Language" width="30"></button>
-                            <button class="access-button" onclick="switchLanguage('es')"><img src="media/images/es-icon-white.png" id="spanish-lang-button" class="nav-access-menu-img" alt="Spanish Language" width="30"></button>
+                            <!-- <button class="access-button"><img src="media/images/sun-icon-white.png" id="mode-button" class="nav-access-menu-img" alt="Light Mode" width="30"></button> -->
+                            <button class="access-button en"><img src="media/images/en-icon-white.png" id="english-lang-button" class="nav-access-menu-img" alt="English Language" width="30"></button>
+                            <button class="access-button fr"><img src="media/images/fr-icon-white.png" id="french-lang-button" class="nav-access-menu-img" alt="French Language" width="30"></button>
+                            <button class="access-button es"><img src="media/images/es-icon-white.png" id="spanish-lang-button" class="nav-access-menu-img" alt="Spanish Language" width="30"></button>
                         </div>
                     </div>
                 </div>
@@ -97,77 +92,93 @@
         <!--All text items will contain 3 languages: English, French and Spanish-->
         <!--English will be default, French and Spanish will be hidden until chosen otherwise-->
         <main>
-            <div id="hero-main-container">
-                <!--Hero Text Section-->
-                <section id="hero-text-buttons-section">
-                    <!--Welcome text-->
-                    <div id="hero-text-container">
-                        <h2 class="lang en">Hello, my name is</h2>
-                        <h2 class="lang fr hidden">Bonjour, je m'appelle</h2>
-                        <h2 class="lang es hidden">Hola, mi nombre es</h2>
-                        <h1>Aydin Gursoy</h1>
-                        <!--[2] type.js span, used class from source-->
-                        <h2 class="lang en">I'm a <span class="auto-type-en"></span></h2>
-                        <h2 class="lang fr hidden">Je suis un <span class="auto-type-fr"></span></h2>
-                        <h2 class="lang es hidden">Soy un <span class="auto-type-es"></span></h2>
-                    </div>
-                    <!--Portfolio and contact buttons-->
-                    <div id="hero-buttons-container">
-                        <button id="hero-button-portfolio" onclick="location.href = '#main-portfolio-container'">
-                            <span class="lang en">Portfolio</span>
-                            <span class="lang fr hidden">Portefeuille</span>
-                            <span class="lang es hidden">Portafolio</span>
-                        </button>
-                        <a href="#main-contact-container" id="hero-button-contact">
-                            <span class="lang en">Contact Me</span>
-                            <span class="lang fr hidden">Contactez-moi</span>
-                            <span class="lang es hidden">Contactame</span>
-                        </a>
-                    </div>
-                </section>
-                <!--Hero Image Section-->
-                <div id="hero-img-container">
-                    <figure id="hero-img-figure">
-                        <div id="hero-img-decoration"></div>
-                        <img src="media/images/portrait2.jpg" id="hero-img" alt="Aydin Gursoy">
-                    </figure>
-                    <!--Language logos on portrait-->
-                    <div id="hero-img-logos">
-                        <img src="media/images/html-logo.png" alt="HTML Logo" id="html-img" width="90">
-                        <img src="media/images/css-logo.png" alt="CSS Logo" id="css-img" width="90">
-                        <img src="media/images/js-logo.png" alt="Javascript Logo" id="js-img" width="90">
+            <div id="hero-wrapper-container">
+                <div id="hero-main-container">
+                    <!--Hero Text Section-->
+                    <section id="hero-text-buttons-section">
+                        <!--Welcome text-->
+                        <div id="hero-text-container">
+                            <h2 class="lang en">Hello, my name is</h2>
+                            <h2 class="lang fr hidden">Bonjour, je m'appelle</h2>
+                            <h2 class="lang es hidden">Hola, mi nombre es</h2>
+                            <h1>Aydin Gursoy</h1>
+                            <!--[2] type.js span, used class from source-->
+                            <h2 class="lang en">I'm a <span class="auto-type-en"></span></h2>
+                            <h2 class="lang fr hidden">Je suis un <span class="auto-type-fr"></span></h2>
+                            <h2 class="lang es hidden">Soy un <span class="auto-type-es"></span></h2>
+                        </div>
+                        <!--Portfolio and contact buttons-->
+                        <div id="hero-buttons-container">
+                            <button id="hero-button-portfolio" onclick="location.href = '#main-portfolio-container'">
+                                <span class="lang en">Portfolio</span>
+                                <span class="lang fr hidden">Portefeuille</span>
+                                <span class="lang es hidden">Portafolio</span>
+                            </button>
+                            <a href="#main-contact-container" id="hero-button-contact">
+                                <span class="lang en">Contact Me</span>
+                                <span class="lang fr hidden">Contactez-moi</span>
+                                <span class="lang es hidden">Contactame</span>
+                            </a>
+                        </div>
+                    </section>
+                    <!--Hero Image Section-->
+                    <div id="hero-img-container">
+                        <figure id="hero-img-figure">
+                            <div id="hero-img-decoration"></div>
+                            <img src="media/images/portrait2.jpg" id="hero-img" alt="Aydin Gursoy">
+                        </figure>
+                        <!--Language logos on portrait-->
+                        <div id="hero-img-logos">
+                            <img src="media/images/html-logo.png" alt="HTML Logo" id="html-img" width="90">
+                            <img src="media/images/css-logo.png" alt="CSS Logo" id="css-img" width="90">
+                            <img src="media/images/js-logo.png" alt="Javascript Logo" id="js-img" width="90">
+                        </div>
                     </div>
                 </div>
             </div>
             <!--About Section-->
             <div id="main-about-container">
-                <section id="about-text-container" data-aos="fade-right" data-aos-duration="800">
+                <section id="about-text-container" data-aos="fade-up">
                     <h2 class="section-title lang en">About me</h2>
-                    <h2 class="section-title lang fr">À propos de moi</h2>
-                    <h2 class="section-title lang es">Acerca de mí</h2>
+                    <h2 class="section-title lang fr hidden">À propos de moi</h2>
+                    <h2 class="section-title lang es hidden">Acerca de mí</h2>
                     <p class="lang en">
-                        Hello, and welcome to my portfolio! My name is Aydin Gursoy, and I'm a 27-year-old junior front-end web developer with a strong interest in web and mobile development. 
-                        Combining a solid educational foundation with a passion for self-learning, I strive to create high-quality projects with accessible, sleek designs.
+                        <b>Hey! I’m Aydin - thanks for taking the time to check out my portfolio!</b>
                         <br><br>
-                        Currently, I'm pursuing a Bachelor's degree in Computer Science at the University of London. I'm eager to join a development team and gain hands-on industry experience in software development.
+                        I’m currently a second-year Computer Science student at the University of London and working as a Software Engineer at Zebra Technologies on an industrial placement.
+                        <br><br>
+                        I <i>thoroughly</i> love building meaningful projects that people genuinely enjoy using. From design system components to fully fledged platforms, I’ve worked on small and large-scale projects. My passion lies in writing code that helps people, whether that’s making everyday tasks easier or improving accessibility. I’m always excited to learn new things and enjoy stepping outside of my comfort zone!
+                        <br><br>
+                        I’ve had the chance to work with a bunch of different technologies across all kinds of projects. I’ve built reusable components with <i>TypeScript, Lit, and Flutter</i>, helped maintain and grow a large business platform using <i>React</i>, and even got my hands dirty with unit testing along the way. I work in Agile teams, taking part in sprints and scrums to keep projects on track.
+                        <br><br>
+                        Outside of coding, I’ve also contributed to Zebra Technologies’ design blog, sharing a bit about what it’s like working in industry. You can check that out here if you're curious!: <a id="blog-link" href="https://design.zebra.com/blog/">Zeta Design Blog</a>
                     </p>
                     <p class="lang fr hidden">
-                        Bonjour et bienvenue sur mon portfolio ! Je m'appelle Aydin Gursoy et je suis un développeur Web front-end junior de 27 ans avec un fort intérêt pour le développement Web et mobile. 
-                        Combinant une base pédagogique solide avec une passion pour l'auto-apprentissage, je m'efforce de créer des projets de haute qualité avec des designs accessibles et élégants.
+                        <b>Salut ! Je suis Aydin - merci de prendre le temps de consulter mon portfolio !</b>
                         <br><br>
-                        Actuellement, je poursuis un baccalauréat en informatique à l'Université de Londres. J'ai hâte de rejoindre une équipe de développement et d'acquérir une expérience pratique du secteur du développement de logiciels.
+                        Je suis actuellement en deuxième année d'informatique à l'Université de Londres et je travaille comme ingénieur logiciel chez Zebra Technologies dans le cadre d'un stage industriel.
+                        <br><br>
+                        J'adore <i>vraiment</i> créer des projets significatifs et centrés sur l'utilisateur que les gens apprécient réellement. Des composants de systèmes de conception aux plateformes complètes, j'ai travaillé sur des projets de petite et grande envergure. Ma passion réside dans l'écriture de code qui aide les gens, que ce soit pour faciliter les tâches quotidiennes ou améliorer l'accessibilité. Je suis toujours enthousiaste à l'idée d'apprendre de nouvelles choses et j'aime vraiment sortir de ma zone de confort !
+                        <br><br>
+                        J'ai eu la chance de travailler avec un tas de technologies différentes sur toutes sortes de projets. J'ai construit des composants réutilisables avec <i>TypeScript, Lit et Flutter</i>, aidé à maintenir et développer une grande plateforme commerciale en utilisant <i>React</i>, et même mis les mains dans les tests unitaires en cours de route. Je travaille dans des équipes Agile, participant à des sprints et des scrums pour garder les projets sur la bonne voie.
+                        <br><br>
+                        En dehors du codage, j'ai également contribué au blog de design de Zebra Technologies, partageant un peu ce que c'est que de travailler dans l'industrie. Vous pouvez consulter cela <a id="blog-link" href="https://design.zebra.com/blog/">ici</a> si vous êtes curieux !
                     </p>
                     <p class="lang es hidden">
-                        ¡Hola y bienvenido a mi portafolio! Mi nombre es Aydin Gursoy y soy un desarrollador web front-end junior de 27 años con un gran interés en el desarrollo web y móvil. 
-                        Combinando una sólida base educativa con una pasión por el autoaprendizaje, me esfuerzo por crear proyectos de alta calidad con diseños elegantes y accesibles.
+                        <b>¡Hola! Soy Aydin - ¡gracias por tomarte el tiempo de revisar mi portafolio!</b>
                         <br><br>
-                        Actualmente, estoy cursando una Licenciatura en Ciencias de la Computación en la Universidad de Londres. Estoy ansioso por unirme a un equipo de desarrollo y adquirir experiencia práctica en la industria del desarrollo de software.
+                        Actualmente soy estudiante de segundo año de Ciencias de la Computación en la Universidad de Londres y trabajo como ingeniero de software en Zebra Technologies como parte de una práctica industrial.
+                        <br><br>
+                        Me <i>encanta</i> crear proyectos significativos y centrados en el usuario que las personas realmente disfruten. Desde componentes de sistemas de diseño hasta plataformas completas, he trabajado en proyectos tanto pequeños como grandes. Mi pasión radica en escribir código que ayude a las personas, ya sea facilitando las tareas diarias o mejorando la accesibilidad. ¡Siempre estoy emocionado de aprender cosas nuevas y realmente disfruto salir de mi zona de confort!
+                        <br><br>
+                        He tenido la oportunidad de trabajar con una variedad de tecnologías en todo tipo de proyectos. He construido componentes reutilizables con <i>TypeScript, Lit y Flutter</i>, ayudado a mantener y hacer crecer una gran plataforma empresarial utilizando <i>React</i>, e incluso me he ensuciado las manos con pruebas unitarias en el camino. Trabajo en equipos ágiles, participando en sprints y scrums para mantener los proyectos en marcha.
+                        <br><br>
+                        Fuera del mundo de la programación, también he contribuido al blog de diseño de Zebra Technologies, compartiendo un poco sobre cómo es trabajar en la industria. ¡Puedes consultarlo <a id="blog-link" href="https://design.zebra.com/blog/">aquí</a> si tienes curiosidad!
                     </p>
-                    <img id="education-img" src="media/images/education-img2.png">
                 </section>
                 <!--Swiper.js images-->
                 <!--[3] Copied divs from source demo and altered to how many I want-->
-                <div class="swiper1 mySwiper1" id="swiperid1" data-aos="fade-right" data-aos-duration="800">
+                <div class="swiper1 mySwiper1" id="swiperid1" data-aos="fade-up" data-aos-offset="-50">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"></div>
                         <div class="swiper-slide"></div>
@@ -176,33 +187,38 @@
                         <div class="swiper-slide"></div>
                         <div class="swiper-slide"></div>
                         <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
                     </div>
+                    <p id="swiper-text" class="lang en">Drag me! :)</p>
+                    <p id="swiper-text" class="lang fr hidden">Faites-moi glisser ! :)</p>
+                    <p id="swiper-text" class="lang es hidden">Arrástrame! :)</p>
                 </div>
             </div>
             <!--Portfolio Section-->
             <section id="main-portfolio-container">
                 <!--Scrolling marquee [4]-->
-                <div id="languages-logo-container" class='marquee' data-aos="fade-left" data-aos-duration="800">
+                <div id="languages-logo-container" class='marquee' data-aos="fade-left">
                     <img src="media/images/html-logo.png" class="languages-img" alt="HTML Logo" width="70">
                     <img src="media/images/css-logo.png" class="languages-img" alt="CSS Logo" width="70">
                     <img src="media/images/js-logo.png" class="languages-img" alt="Javascript Logo" width="70">
                     <img src="media/images/python-logo.png" class="languages-img" alt="Python Logo" width="80">
+                    <img src="media/images/flutter-logo.png" class="languages-img" alt="Flutter Logo" width="70">
+                    <img src="media/images/typescript-logo.png" class="languages-img" alt="Typescript Logo" width="70">
+                    <img src="media/images/lit-logo.png" class="languages-img" alt="Lit Logo" width="70">
+                    <img src="media/images/react-logo.png" class="languages-img" alt="React Logo" width="80">
                     <!--Duplicated images to loop-->
                     <img src="media/images/html-logo.png" class="languages-img" alt="HTML Logo" width="70">
                     <img src="media/images/css-logo.png" class="languages-img" alt="CSS Logo" width="70">
                     <img src="media/images/js-logo.png" class="languages-img" alt="Javascript Logo" width="70">
                     <img src="media/images/python-logo.png" class="languages-img" alt="Python Logo" width="80">
-                    <!--Duplicated images to loop-->
-                    <img src="media/images/html-logo.png" class="languages-img" alt="HTML Logo" width="70">
-                    <img src="media/images/css-logo.png" class="languages-img" alt="CSS Logo" width="70">
-                    <img src="media/images/js-logo.png" class="languages-img" alt="Javascript Logo" width="70">
-                    <img src="media/images/python-logo.png" class="languages-img" alt="Python Logo" width="80">
+                    <img src="media/images/flutter-logo.png" class="languages-img" alt="Flutter Logo" width="70">
+                    <img src="media/images/typescript-logo.png" class="languages-img" alt="Typescript Logo" width="70">
+                    <img src="media/images/lit-logo.png" class="languages-img" alt="Lit Logo" width="70">
+                    <img src="media/images/react-logo.png" class="languages-img" alt="React Logo" width="80">
                 </div>
-                <div id="feature-project-container" data-aos="fade-up" data-aos-duration="800">
+                <div id="feature-project-container" data-aos="fade-up" data-aos-offset="-80">
                     <h2 class="section-title lang en">Portfolio</h2>
-                    <h2 class="section-title lang fr">Portfolio m</h2>
-                    <h2 class="section-title lang es">Portafolio</h2>
+                    <h2 class="section-title lang fr hidden">Portfolio m</h2>
+                    <h2 class="section-title lang es hidden">Portafolio</h2>
                     <div id="feature-project-card-outer"> <!--This is for the animated border-->
                         <div id="feature-project-card">
                             <!--Feature project images-->
@@ -237,7 +253,7 @@
                     </div>
             </section>
             <!--Other Projects Section-->
-            <section id="projects-section" data-aos="fade-up" data-aos-duration="800">
+            <section id="projects-section" data-aos="fade-up" data-aos-offset="-120">
                     <!--Other Project Cards-->
                     <!--Calculator project card-->
                     <div class="project-outer-card"> <!--This is for the animated border-->
@@ -312,10 +328,10 @@
             </section>
             <!--CONTACT SECTION-->
             <section id="main-contact-container">
-                <h2 class="section-title lang en" data-aos="fade-right" data-aos-duration="800">Contact</h2>
-                <h2 class="section-title lang fr" data-aos="fade-right" data-aos-duration="800">Contactez-moi</h2>
-                <h2 class="section-title lang es" data-aos="fade-right" data-aos-duration="800">Contáctame</h2>
-                <div id="contact-content-container" data-aos="fade-right" data-aos-duration="800">
+                <h2 class="section-title lang en" data-aos="fade-right">Contact</h2>
+                <h2 class="section-title lang fr hidden" data-aos="fade-right">Contactez-moi</h2>
+                <h2 class="section-title lang es hidden" data-aos="fade-right">Contáctame</h2>
+                <div id="contact-content-container" data-aos="fade-right" data-aos-offset="-80">
                     <div id="contact-map">
                         <!--Map-->
                         <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19634.273670743678!2d-0.7782436967968117!3d52.038136454058105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764cf882238685%3A0x161a9df74cb97e14!2sMilton%20Keynes!5e0!3m2!1sen!2suk!4v1723664639765!5m2!1sen!2suk" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -323,9 +339,9 @@
                     <div id="contact-desc">
                         <!--Description-->
                         <p id="contact-email-container">
-                            <span class="lang en">I'm currently located in Milton Keynes. If you'd like to view my formal CV or get in contact with me, you can send me an email here:<br><br></span>
-                            <span class="lang fr hidden">Je vis actuellement à Milton Keynes. Si vous souhaitez consulter mon CV officiel ou me contacter, vous pouvez m'envoyer un email ici:<br><br></span>
-                            <span class="lang es hidden">Actualmente estoy ubicado en Milton Keynes. Si deseas ver mi CV formal o ponerte en contacto conmigo, puedes enviarme un correo electrónico aquí:<br><br></span>
+                            <span class="lang en">I hope you enjoyed my portfolio! I'm currently based in Milton Keynes. If you're interested in working with me and would like to contact me or view my formal CV, you can send me an email from the button below. <br><br> Hope to hear from you soon!<br><br></span>
+                            <span class="lang fr hidden">J'espère que vous avez apprécié mon portfolio ! Je suis actuellement basé à Milton Keynes. Si vous êtes intéressé à travailler avec moi et souhaitez me contacter ou consulter mon CV officiel, vous pouvez m'envoyer un e-mail depuis le bouton ci-dessous. <br><br> J'espère avoir de vos nouvelles bientôt !<br><br></span>
+                            <span class="lang es hidden">¡Espero que hayas disfrutado de mi portafolio! Actualmente estoy ubicado en Milton Keynes. Si estás interesado en trabajar conmigo y deseas contactarme o ver mi CV formal, puedes enviarme un correo electrónico desde el botón de abajo. <br><br> ¡Espero saber de ti pronto!<br><br></span>
                             <a class="light-bg-link" href="mailto:aydinagursoy@gmail.com">
                                 <span class="lang en">email me!</span>
                                 <span class="lang fr hidden">envoyez-moi un e-mail!</span>
@@ -338,102 +354,27 @@
         </main>
         <!--Footer-->
         <footer>
-            <div id="footer-main-container" data-aos="fade-up" data-aos-duration="800">
+            <div id="footer-main-container" data-aos="fade-up" data-aos-offset="-80">
                 <!--To Top Button-->
                 <div id="footer-totop-button-container">
                     <a href="#"><img src="media/images/to-top.png" id="to-top-img" alt="To top" width="50"></a>
                 </div>
                 <!--Social Links-->
                 <div id="footer-socials-container">
-                    <a href="https://www.facebook.com/aydingurs/"><img src="media/images/fb-logo-white.png" id="footer-fb-logo" class="footer-social-logo" alt="Facebook Logo" width="30"></a>
                     <a href="https://www.linkedin.com/in/aydin-gursoy/"><img src="media/images/linkedin-logo-white.png" id="footer-linkedin-logo" class="footer-social-logo" alt="LinkedIn Logo" width="30"></a>
                     <a href="https://github.com/aygurs"><img src="media/images/github-logo-white.png" id="footer-github-logo" class="footer-social-logo" alt="GitHub Logo" width="30"></a>
                 </div>
                 <!--Copyright Text-->
                 <div id="footer-copyright-container">
-                    <p class="lang en">All Rights Reserved © 2024 Aydin Gursoy</p>
-                    <p class="lang fr hidden">Tous droits réservés © 2024 Aydin Gursoy</p>
-                    <p class="lang es hidden">Reservados todos los derechos © 2024 Aydin Gursoy</p>
-                    <p>
-                        <span class="lang en">Designed by me and coded within</span>
-                        <span class="lang fr hidden">Conçu par moi et codé à l'intérieur</span>
-                        <span class="lang es hidden">Diseñado por mí y codificado dentro</span>
-                        <a id="footer-vcs-link" href="https://code.visualstudio.com/">Visual Studio Code</a>
-                    </p>
+                    <p class="lang en">All Rights Reserved © 2025 Aydin Gursoy</p>
+                    <p class="lang fr hidden">Tous droits réservés © 2025 Aydin Gursoy</p>
+                    <p class="lang es hidden">Reservados todos los derechos © 2025 Aydin Gursoy</p>
                 </div>
             </div>
         </footer>
-        <!--Scripts-->
-        <script src="scripts/main.js"></script>
-        <!--[1] Copied from source-->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-        <!--[2] Copied from source, altered each typed object as needed-->
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-        <script>
-            let typedEn = new Typed(".auto-type-en", {
-                strings: ["Web Developer", "Front-End Developer", "Python Developer", "UX Designer"],
-                typeSpeed: 150,
-                backSpeed: 150,
-                loop:true
-            });
-            let typedFr = new Typed(".auto-type-fr", {
-                strings: ["Développeur Web", "Développeur Front-End", "Développeur Python", "Concepteur UX"],
-                typeSpeed: 150,
-                backSpeed: 150,
-                loop:true
-            });
-            let typedEs = new Typed(".auto-type-es", {
-                strings: ["Desarrollador web", "Desarrollador front-end", "Desarrollador de Python", "Diseñador de experiencia de usuario"],
-                typeSpeed: 150,
-                backSpeed: 150,
-                loop:true
-            });
-        </script>
-        <!--[3] Copied from source-->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script>
-            var swiper1 = new Swiper(".mySwiper1", {
-            effect: "cards",
-            grabCursor: true,
-            });
-        </script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var swiper2 = new Swiper(".mySwiper2", {
-                    spaceBetween: 30,
-                    centeredSlides: true,
-                    autoplay: {
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    },
-                    pagination: {
-                        el: ".swiper-pagination2",
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    },
-                });
-            });
-        </script>
-        <!--[4] Copied from source-->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('.marquee').marquee({
-                duration: 15000,
-                delayBeforeStart: 0,
-                direction: 'left',
-                duplicated: true,
-                startVisible: true
-                });
-            });
-        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <script src="scripts/vanta.waves.min.js"></script>
+        <script type="module" src="./scripts/main.js"></script>
     </body>
 </html>
 <!--CITATIONS-->
@@ -452,3 +393,7 @@
     <!--[4]-->
     <!--A Afridi 'jQuery.Marquee', 2017 [Source code]. 
     https://github.com/aamirafridi/jQuery.Marquee/?tab=readme-ov-file -->
+
+    <!--[5]-->
+    <!--T Tarng 'Vanta.js', 2018 [Source code]. 
+    https://github.com/tengbao/vanta -->
