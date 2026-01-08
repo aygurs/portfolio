@@ -5,7 +5,7 @@ export default defineConfig({
     build: {
         outDir: 'dist', // Output directory for the bundled files
         rollupOptions: {
-            input: './index.html', // Ensure the correct HTML file is used
+            input: './index.html',
         },
     },
 });
