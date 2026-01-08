@@ -1,3 +1,7 @@
+// Import Vanta.js and THREE.js
+import 'vanta/dist/vanta.waves.min.js';
+import * as THREE from 'three';
+
 // Import AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -13,6 +17,8 @@ import '../stylesheets/swiper.css';
 // Import jQuery and Marquee
 import $ from 'jquery';
 import 'jquery.marquee';
+
+let vantaEffect;
 
 // Initialize AOS
 AOS.init({
@@ -77,17 +83,25 @@ $(document).ready(function () {
 });
 
 // Initialize Vanta.js
-VANTA.WAVES({
-        el: "#hero-wrapper-container",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: true,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x0f1d2b,
-        shininess: 11.00,
-        waveHeight: 4.50,
-        waveSpeed: 0.90
+window.addEventListener('load', () => {
+  const el = document.querySelector('#hero-wrapper-container');
+  if (!el) return;
+
+  if (vantaEffect) vantaEffect.destroy();
+
+  vantaEffect = window.VANTA.WAVES({
+    el,
+    THREE,
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: true,
+    minHeight: 200,
+    minWidth: 200,
+    scale: 1,
+    scaleMobile: 1,
+    color: 0x0f1d2b,
+    shininess: 11,
+    waveHeight: 4.5,
+    waveSpeed: 0.9
+  });
 });

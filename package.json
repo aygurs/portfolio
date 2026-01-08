@@ -28,7 +28,9 @@
     "jquery": "^3.7.1",
     "jquery.marquee": "^1.6.1",
     "swiper": "^12.0.3",
-    "typed.js": "^2.1.0"
+    "three": "^0.134.0",
+    "typed.js": "^2.1.0",
+    "vanta": "^0.5.24"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
