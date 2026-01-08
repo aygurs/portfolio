@@ -14,11 +14,6 @@
         <meta name='robots' content='noindex, nofollow'>
         <link rel="stylesheet" href="stylesheets/main.css">
         <link rel="stylesheet" href="stylesheets/nav-footer.css">
-        <!--Swiper.js-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-        <link rel="stylesheet" href="stylesheets/swiper.css">
-        <!--[1] Copied from source-->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
         <!--Navigation Bar-->
@@ -55,7 +50,7 @@
                     </div>
                     <!--Hamburger menu on smaller devices-->
                     <div id="hamburger-buttons-container">
-                        <button onclick="openHamburgerMenu()" id="nav-hamburger-menu">☰</button>
+                        <button id="nav-hamburger-menu">☰</button>
                         <ul id="hamburger-list">
                             <li><a href="index.html">
                                 <span class="lang en">Home</span>
@@ -81,13 +76,13 @@
                     </div>
                     <!--Accessibility Nav menu-->
                     <div id="nav-access-button-container">
-                        <button onclick="openAccessMenu()" id="access-button"><img src="media/images/accessibility-logo.png" id="nav-access-img" alt="Accessibility Button" width="30"></button>
+                        <button id="access-button"><img src="media/images/accessibility-logo.png" id="nav-access-img" alt="Accessibility Button" width="30"></button>
                         <div id="nav-access-menu">
                             <button class="access-button"><img src="media/images/text-increase-icon-white.png" id="font-increase-button" class="nav-access-menu-img" alt="Increase Text Size" width="30"></button>
                             <!-- <button class="access-button"><img src="media/images/sun-icon-white.png" id="mode-button" class="nav-access-menu-img" alt="Light Mode" width="30"></button> -->
-                            <button class="access-button" onclick="switchLanguage('en')"><img src="media/images/en-icon-white.png" id="english-lang-button" class="nav-access-menu-img" alt="English Language" width="30"></button>
-                            <button class="access-button" onclick="switchLanguage('fr')"><img src="media/images/fr-icon-white.png" id="french-lang-button" class="nav-access-menu-img" alt="French Language" width="30"></button>
-                            <button class="access-button" onclick="switchLanguage('es')"><img src="media/images/es-icon-white.png" id="spanish-lang-button" class="nav-access-menu-img" alt="Spanish Language" width="30"></button>
+                            <button class="access-button en"><img src="media/images/en-icon-white.png" id="english-lang-button" class="nav-access-menu-img" alt="English Language" width="30"></button>
+                            <button class="access-button fr"><img src="media/images/fr-icon-white.png" id="french-lang-button" class="nav-access-menu-img" alt="French Language" width="30"></button>
+                            <button class="access-button es"><img src="media/images/es-icon-white.png" id="spanish-lang-button" class="nav-access-menu-img" alt="Spanish Language" width="30"></button>
                         </div>
                     </div>
                 </div>
@@ -143,20 +138,20 @@
             </div>
             <!--About Section-->
             <div id="main-about-container">
-                <section id="about-text-container" data-aos="fade-right" data-aos-duration="800">
+                <section id="about-text-container" data-aos="fade-up">
                     <h2 class="section-title lang en">About me</h2>
-                    <h2 class="section-title lang fr">À propos de moi</h2>
-                    <h2 class="section-title lang es">Acerca de mí</h2>
+                    <h2 class="section-title lang fr hidden">À propos de moi</h2>
+                    <h2 class="section-title lang es hidden">Acerca de mí</h2>
                     <p class="lang en">
                         <b>Hey! I’m Aydin - thanks for taking the time to check out my portfolio!</b>
                         <br><br>
                         I’m currently a second-year Computer Science student at the University of London and working as a Software Engineer at Zebra Technologies on an industrial placement.
                         <br><br>
-                        I <i>thoroughly</i> love building meaningful, user-focused projects that people genuinely enjoy using. From design system components to fully fledged platforms, I’ve worked on both small- and large-scale projects. My passion lies in writing code that helps people, whether that’s making everyday tasks easier or improving accessibility. I’m always excited to learn new things and truly enjoy stepping outside of my comfort zone!
+                        I <i>thoroughly</i> love building meaningful projects that people genuinely enjoy using. From design system components to fully fledged platforms, I’ve worked on small and large-scale projects. My passion lies in writing code that helps people, whether that’s making everyday tasks easier or improving accessibility. I’m always excited to learn new things and enjoy stepping outside of my comfort zone!
                         <br><br>
                         I’ve had the chance to work with a bunch of different technologies across all kinds of projects. I’ve built reusable components with <i>TypeScript, Lit, and Flutter</i>, helped maintain and grow a large business platform using <i>React</i>, and even got my hands dirty with unit testing along the way. I work in Agile teams, taking part in sprints and scrums to keep projects on track.
                         <br><br>
-                        Outside of coding, I’ve also contributed to Zebra Technologies’ design blog, sharing a bit about what it’s like working in industry. You can check that out <a id="blog-link" href="https://design.zebra.com/blog/">here</a> if you’re curious!
+                        Outside of coding, I’ve also contributed to Zebra Technologies’ design blog, sharing a bit about what it’s like working in industry. You can check that out here if you're curious!: <a id="blog-link" href="https://design.zebra.com/blog/">Zeta Design Blog</a>
                     </p>
                     <p class="lang fr hidden">
                         <b>Salut ! Je suis Aydin - merci de prendre le temps de consulter mon portfolio !</b>
@@ -183,7 +178,7 @@
                 </section>
                 <!--Swiper.js images-->
                 <!--[3] Copied divs from source demo and altered to how many I want-->
-                <div class="swiper1 mySwiper1" id="swiperid1" data-aos="fade-right" data-aos-duration="800">
+                <div class="swiper1 mySwiper1" id="swiperid1" data-aos="fade-up" data-aos-offset="-50">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"></div>
                         <div class="swiper-slide"></div>
@@ -193,13 +188,15 @@
                         <div class="swiper-slide"></div>
                         <div class="swiper-slide"></div>
                     </div>
-                    <p id="swiper-text">Drag me! :)</p>
+                    <p id="swiper-text" class="lang en">Drag me! :)</p>
+                    <p id="swiper-text" class="lang fr hidden">Faites-moi glisser ! :)</p>
+                    <p id="swiper-text" class="lang es hidden">Arrástrame! :)</p>
                 </div>
             </div>
             <!--Portfolio Section-->
             <section id="main-portfolio-container">
                 <!--Scrolling marquee [4]-->
-                <div id="languages-logo-container" class='marquee' data-aos="fade-left" data-aos-duration="800">
+                <div id="languages-logo-container" class='marquee' data-aos="fade-left">
                     <img src="media/images/html-logo.png" class="languages-img" alt="HTML Logo" width="70">
                     <img src="media/images/css-logo.png" class="languages-img" alt="CSS Logo" width="70">
                     <img src="media/images/js-logo.png" class="languages-img" alt="Javascript Logo" width="70">
@@ -218,10 +215,10 @@
                     <img src="media/images/lit-logo.png" class="languages-img" alt="Lit Logo" width="70">
                     <img src="media/images/react-logo.png" class="languages-img" alt="React Logo" width="80">
                 </div>
-                <div id="feature-project-container" data-aos="fade-up" data-aos-duration="800">
+                <div id="feature-project-container" data-aos="fade-up" data-aos-offset="-80">
                     <h2 class="section-title lang en">Portfolio</h2>
-                    <h2 class="section-title lang fr">Portfolio m</h2>
-                    <h2 class="section-title lang es">Portafolio</h2>
+                    <h2 class="section-title lang fr hidden">Portfolio m</h2>
+                    <h2 class="section-title lang es hidden">Portafolio</h2>
                     <div id="feature-project-card-outer"> <!--This is for the animated border-->
                         <div id="feature-project-card">
                             <!--Feature project images-->
@@ -256,7 +253,7 @@
                     </div>
             </section>
             <!--Other Projects Section-->
-            <section id="projects-section" data-aos="fade-up" data-aos-duration="800">
+            <section id="projects-section" data-aos="fade-up" data-aos-offset="-120">
                     <!--Other Project Cards-->
                     <!--Calculator project card-->
                     <div class="project-outer-card"> <!--This is for the animated border-->
@@ -331,10 +328,10 @@
             </section>
             <!--CONTACT SECTION-->
             <section id="main-contact-container">
-                <h2 class="section-title lang en" data-aos="fade-right" data-aos-duration="800">Contact</h2>
-                <h2 class="section-title lang fr" data-aos="fade-right" data-aos-duration="800">Contactez-moi</h2>
-                <h2 class="section-title lang es" data-aos="fade-right" data-aos-duration="800">Contáctame</h2>
-                <div id="contact-content-container" data-aos="fade-right" data-aos-duration="800">
+                <h2 class="section-title lang en" data-aos="fade-right">Contact</h2>
+                <h2 class="section-title lang fr hidden" data-aos="fade-right">Contactez-moi</h2>
+                <h2 class="section-title lang es hidden" data-aos="fade-right">Contáctame</h2>
+                <div id="contact-content-container" data-aos="fade-right" data-aos-offset="-80">
                     <div id="contact-map">
                         <!--Map-->
                         <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19634.273670743678!2d-0.7782436967968117!3d52.038136454058105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764cf882238685%3A0x161a9df74cb97e14!2sMilton%20Keynes!5e0!3m2!1sen!2suk!4v1723664639765!5m2!1sen!2suk" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -357,14 +354,13 @@
         </main>
         <!--Footer-->
         <footer>
-            <div id="footer-main-container" data-aos="fade-up" data-aos-duration="800">
+            <div id="footer-main-container" data-aos="fade-up" data-aos-offset="-80">
                 <!--To Top Button-->
                 <div id="footer-totop-button-container">
                     <a href="#"><img src="media/images/to-top.png" id="to-top-img" alt="To top" width="50"></a>
                 </div>
                 <!--Social Links-->
                 <div id="footer-socials-container">
-                    <a href="https://www.facebook.com/aydingurs/"><img src="media/images/fb-logo-white.png" id="footer-fb-logo" class="footer-social-logo" alt="Facebook Logo" width="30"></a>
                     <a href="https://www.linkedin.com/in/aydin-gursoy/"><img src="media/images/linkedin-logo-white.png" id="footer-linkedin-logo" class="footer-social-logo" alt="LinkedIn Logo" width="30"></a>
                     <a href="https://github.com/aygurs"><img src="media/images/github-logo-white.png" id="footer-github-logo" class="footer-social-logo" alt="GitHub Logo" width="30"></a>
                 </div>
@@ -373,108 +369,12 @@
                     <p class="lang en">All Rights Reserved © 2025 Aydin Gursoy</p>
                     <p class="lang fr hidden">Tous droits réservés © 2025 Aydin Gursoy</p>
                     <p class="lang es hidden">Reservados todos los derechos © 2025 Aydin Gursoy</p>
-                    <p>
-                        <span class="lang en">Designed by me and coded within</span>
-                        <span class="lang fr hidden">Conçu par moi et codé à l'intérieur</span>
-                        <span class="lang es hidden">Diseñado por mí y codificado dentro</span>
-                        <a id="footer-vcs-link" href="https://code.visualstudio.com/">Visual Studio Code</a>
-                    </p>
-                    <p class="lang en">This portfolio is made entirely with vanilla JavaScript, HTML, and CSS!</p>
-                    <p class="lang fr hidden">Ce portfolio est entièrement réalisé avec JavaScript, HTML et CSS natifs!</p>
-                    <p class="lang es hidden">¡Este portafolio está hecho completamente con JavaScript, HTML y CSS puros!</p>
                 </div>
             </div>
         </footer>
-        <!--Scripts-->
-        <script src="scripts/main.js"></script>
-        <!--[1] Copied from source-->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-        <!--[2] Copied from source, altered each typed object as needed-->
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-        <script>
-            let typedEn = new Typed(".auto-type-en", {
-                strings: ["Software Engineer.", "Front-End Developer.", "Flutter Developer.", "UI Engineer."],
-                typeSpeed: 150,
-                backSpeed: 150,
-                loop:true
-            });
-            let typedFr = new Typed(".auto-type-fr", {
-                strings: ["Ingénieur logiciel.", "Développeur Front-End.", "Desarrollador Flutter.", "Ingénieur UI."],
-                typeSpeed: 150,
-                backSpeed: 150,
-                loop:true
-            });
-            let typedEs = new Typed(".auto-type-es", {
-                strings: ["Ingeniero de software.", "Desarrollador Front-End.", "Desarrollador Flutter.", "Ingeniero de UI."],
-                typeSpeed: 150,
-                backSpeed: 150,
-                loop:true
-            });
-        </script>
-        <!--[3] Copied from source-->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script>
-            var swiper1 = new Swiper(".mySwiper1", {
-            effect: "cards",
-            grabCursor: true,
-            });
-        </script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var swiper2 = new Swiper(".mySwiper2", {
-                    spaceBetween: 30,
-                    centeredSlides: true,
-                    autoplay: {
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    },
-                    pagination: {
-                        el: ".swiper-pagination2",
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    },
-                });
-            });
-        </script>
-        <!--[4] Copied from source-->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('.marquee').marquee({
-                duration: 15000,
-                delayBeforeStart: 0,
-                direction: 'left',
-                duplicated: true,
-                startVisible: true
-                });
-            });
-        </script>
-        <!--[5] Copied from source-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
         <script src="scripts/vanta.waves.min.js"></script>
-        <script>
-        VANTA.WAVES({
-        el: "#hero-wrapper-container",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: true,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x0f1d2b,
-        shininess: 11.00,
-        waveHeight: 4.50,
-        waveSpeed: 0.90
-        })
-        </script>
+        <script type="module" src="./scripts/main.js"></script>
     </body>
 </html>
 <!--CITATIONS-->

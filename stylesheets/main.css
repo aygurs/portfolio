@@ -116,7 +116,7 @@
 :root {
     /*Website Colour Scheme*/
     --primary: rgb(250, 249, 246);
-    --secondary: rgb(3, 169, 244);
+    --secondary: rgb(31, 117, 178);
     --tertiary: rgb(15, 29, 43);
 }
 
@@ -702,7 +702,7 @@ margin: 0.5em 0em 0.5em 0em;
   margin-top: 1em;
 }
 .light-bg-link{
-  background-color: var(--tertiary);
+  background-color: var(--secondary);
   padding: 0.2em 0.5em;
   border-radius: 5px;
 }

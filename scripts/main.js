@@ -1,3 +1,24 @@
+import './libraries.js';
+
+//add event listeners to menu buttons
+let accessMenuButton = document.getElementById('access-button');
+accessMenuButton.addEventListener("click", openAccessMenu);
+
+let hamburgerMenuButton = document.getElementById('nav-hamburger-menu');
+hamburgerMenuButton.addEventListener("click", openHamburgerMenu);
+
+let fontSizeButton = document.getElementById('font-increase-button');
+fontSizeButton.addEventListener("click", fontSizeChange)
+
+let englishLangButton = document.getElementsByClassName('access-button en')[0];
+englishLangButton.addEventListener("click", function() { switchLanguage('en'); });
+
+let frenchLangButton = document.getElementsByClassName('access-button fr')[0];
+frenchLangButton.addEventListener("click", function() { switchLanguage('fr'); });
+
+let spanishLangButton = document.getElementsByClassName('access-button es')[0];
+spanishLangButton.addEventListener("click", function() { switchLanguage('es'); });
+
 //Opens accessibility menu on click
 function openAccessMenu() {
     let accessMenu = document.getElementById('nav-access-menu');
@@ -10,10 +31,6 @@ function openHamburgerMenu() {
 }
 
 //Accessibility functions
-//Font size button
-//Target button
-let fontSizeButton = document.getElementById('font-increase-button');
-fontSizeButton.addEventListener("click", fontSizeChange)
 //Keeps track of clicks
 let fontClicks = 0
 //Map is used to keep ordered list with key:value pairs
@@ -71,9 +88,11 @@ function fontSizeChange() {
 //Store theme in local storage, default is dark (this is here in case separate pages are added in the future)
 //It says 'light' as default, but function is ran on load so it will be opposite
 let currentMode = localStorage.getItem('theme') || 'light'
+
 //Target button
 // let modeButton = document.getElementById('mode-button');
 // modeButton.addEventListener("click", modeCheck)
+
 //Map is used to keep ordered list with key:values
 let originalBgColours = new Map();
 
@@ -197,9 +216,6 @@ function modeChange() {
                     link.style.color = 'rgb(250, 249, 246)'; // Light text color
                 }
             }
-            //Link for Visual code studio link in footer
-            let footerVcsLink = document.getElementById("footer-vcs-link")
-            footerVcsLink.style.color = 'rgb(3, 169, 244)'
         });
     });
 };
