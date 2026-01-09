@@ -339,12 +339,13 @@ margin: 0.5em 0em 0.5em 0em;
 /*Phone screen*/
 @media only screen and (max-width: 600px){
   #hero-main-container{
-    margin: 5em 12vw 5em 12vw;
+    margin: 0em 12vw 0em 12vw;
+    padding: 10em 15vw 10em 15vw;
   }
   /*Font size change*/
   #hero-text-container{
     font-size: 0.7em;
-    min-height: 17vh;
+    min-height: 14vh;
   }
   /*Image size change*/
   #hero-img{
@@ -379,7 +380,9 @@ margin: 0.5em 0em 0.5em 0em;
   /*Contact button font size*/
   #hero-button-contact{
     font-size: 0.8em;
+    white-space: nowrap;
   }
+
   /*Logo backgrounds and size*/
   #html-img, #css-img, #js-img{
     background-color: transparent;

@@ -256,7 +256,7 @@ document.addEventListener("scroll", function () {
     const nav = document.querySelector("nav");
     const hero = document.querySelector("#hero-main-container");
     const accessMenu = document.getElementById('nav-access-menu');
-    const navReappearPoint = hero.offsetTop + 150;
+    const navReappearPoint = window.innerWidth <= 600 ? hero.offsetTop + 100 : hero.offsetTop + 150;
 
     if (window.scrollY > navReappearPoint) {
         nav.classList.add("scrolled");
