@@ -4,8 +4,46 @@ import './libraries.js';
 let accessMenuButton = document.getElementById('access-button');
 accessMenuButton.addEventListener("click", openAccessMenu);
 
+// Close accessibility menu when a menu button is clicked
+let accessMenu = document.getElementById('nav-access-menu');
+let accessMenuButtons = accessMenu.querySelectorAll('.access-button');
+accessMenuButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        accessMenu.classList.remove('active');
+    });
+});
+
+// Close accessibility menu when clicking outside
+document.addEventListener('click', (event) => {
+    const isMenuOpen = accessMenu.classList.contains('active');
+    const isClickInsideMenu = accessMenu.contains(event.target);
+    const isClickOnButton = accessMenuButton.contains(event.target);
+    if (isMenuOpen && !isClickInsideMenu && !isClickOnButton) {
+        accessMenu.classList.remove('active');
+    }
+});
+
 let hamburgerMenuButton = document.getElementById('nav-hamburger-menu');
 hamburgerMenuButton.addEventListener("click", openHamburgerMenu);
+
+// Close hamburger menu when a menu link is clicked
+let hamburgerMenu = document.getElementById('hamburger-list');
+let hamburgerLinks = hamburgerMenu.querySelectorAll('a');
+hamburgerLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        hamburgerMenu.classList.remove('active');
+    });
+});
+
+// Close hamburger menu when clicking outside
+document.addEventListener('click', (event) => {
+    const isMenuOpen = hamburgerMenu.classList.contains('active');
+    const isClickInsideMenu = hamburgerMenu.contains(event.target);
+    const isClickOnButton = hamburgerMenuButton.contains(event.target);
+    if (isMenuOpen && !isClickInsideMenu && !isClickOnButton) {
+        hamburgerMenu.classList.remove('active');
+    }
+});
 
 let fontSizeButton = document.getElementById('font-increase-button');
 fontSizeButton.addEventListener("click", fontSizeChange)

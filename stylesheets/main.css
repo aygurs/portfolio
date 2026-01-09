@@ -223,7 +223,7 @@ margin: 0.5em 0em 0.5em 0em;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16em 15vw 12em 15vw;
+    padding: 16em 15vw 14em 15vw;
     animation: 1.5s fadeInUp;
 }
 /*Container for portrait and logos*/
